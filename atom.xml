@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>今夕清欢</title>
+  
+  <subtitle>生活没有标准答案</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jinxiqinghuan.github.io/"/>
+  <updated>2020-11-29T05:52:09.376Z</updated>
+  <id>https://jinxiqinghuan.github.io/</id>
+  
+  <author>
+    <name>qinghuan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ML</title>
+    <link href="https://jinxiqinghuan.github.io/2020/11/19/ml/"/>
+    <id>https://jinxiqinghuan.github.io/2020/11/19/ml/</id>
+    <published>2020-11-19T06:08:05.250Z</published>
+    <updated>2020-11-29T05:52:09.376Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ML&quot;&gt;&lt;a href=&quot;#ML&quot; class=&quot;headerlink&quot; title=&quot;ML&quot;&gt;&lt;/a&gt;ML&lt;/h1&gt;&lt;h3 id=&quot;线性回归问题&quot;&gt;&lt;a href=&quot;#线性回归问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="深度学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IMAGE PROCESSING</title>
+    <link href="https://jinxiqinghuan.github.io/2020/11/08/andrew-ng-career-advice-reading-research-papers/"/>
+    <id>https://jinxiqinghuan.github.io/2020/11/08/andrew-ng-career-advice-reading-research-papers/</id>
+    <published>2020-11-08T12:17:06.000Z</published>
+    <updated>2020-11-08T12:18:06.506Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h2 id=&quot;数字图像处理（上海交大）&quot;&gt;&lt;a href=&quot;#数字图像处理（上海交大）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pytorch学习笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/23/pytorch-xue-xi-bi-ji/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/23/pytorch-xue-xi-bi-ji/</id>
+    <published>2020-10-23T12:21:01.713Z</published>
+    <updated>2020-10-24T06:10:45.677Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Pytorch学习笔记&quot;&gt;&lt;a href=&quot;#Pytorch学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Pytorch学习笔记&quot;&gt;&lt;/a&gt;Pytorch学习笔记&lt;/h1&gt;&lt;h3 id=&quot;Pytorch零基础篇&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="深度学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+      <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenCV图像处理基础</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/19/opencv-tu-xiang-chu-li-ji-chu/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/19/opencv-tu-xiang-chu-li-ji-chu/</id>
+    <published>2020-10-19T12:54:36.919Z</published>
+    <updated>2020-10-21T10:34:44.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;图片的读取&quot;&gt;&lt;a href=&quot;#图片的读取&quot; class=&quot;headerlink&quot; title=&quot;图片的读取&quot;&gt;&lt;/a&gt;图片的读取&lt;/h5&gt;&lt;pre class=&quot; language-python&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+      <category term="OpenCV" scheme="https://jinxiqinghuan.github.io/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IMAGE PROCESSING</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/18/image-processing/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/18/image-processing/</id>
+    <published>2020-10-18T08:00:19.287Z</published>
+    <updated>2020-11-29T05:50:50.917Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h2 id=&quot;数字图像处理（上海交大课程）&quot;&gt;&lt;a href=&quot;#数字图像处理（上海交大课程）&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#学习笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/13/c-xue-xi-bi-ji/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/13/c-xue-xi-bi-ji/</id>
+    <published>2020-10-13T11:18:03.083Z</published>
+    <updated>2020-10-18T08:03:39.408Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: ‘C#学习笔记’&lt;br&gt;categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‘C#’&lt;br&gt;tags:&lt;/li&gt;
+&lt;li&gt;‘C#’&lt;/li&gt;
+&lt;li&gt;学习笔记系列&lt;br&gt;date: 2020-09-27
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/13/java-xue-xi-bi-ji/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/13/java-xue-xi-bi-ji/</id>
+    <published>2020-10-13T11:18:00.000Z</published>
+    <updated>2020-10-18T08:03:54.518Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java学习笔记&quot;&gt;&lt;a href=&quot;#Java学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Java学习笔记&quot;&gt;&lt;/a&gt;Java学习笔记&lt;/h1&gt;&lt;h2 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://jinxiqinghuan.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://jinxiqinghuan.github.io/tags/Java/"/>
+    
+      <category term="学习笔记系列" scheme="https://jinxiqinghuan.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>物联网技术在农业中的应用</title>
+    <link href="https://jinxiqinghuan.github.io/2020/10/12/wu-lian-wang-ji-zhu-zai-nong-ye-zhong-de-ying-yong/"/>
+    <id>https://jinxiqinghuan.github.io/2020/10/12/wu-lian-wang-ji-zhu-zai-nong-ye-zhong-de-ying-yong/</id>
+    <published>2020-10-12T03:13:26.764Z</published>
+    <updated>2020-10-12T03:12:29.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;物联网技术在农业中的应用&quot;&gt;&lt;a href=&quot;#物联网技术在农业中的应用&quot; class=&quot;headerlink&quot; title=&quot;物联网技术在农业中的应用&quot;&gt;&lt;/a&gt;物联网技术在农业中的应用&lt;/h1&gt;&lt;h3 id=&quot;一、物联网技术发展概述&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux脚本示例——简单脚本实现自动更新博客</title>
+    <link href="https://jinxiqinghuan.github.io/2020/09/28/linux-jiao-ben-shi-li-jian-dan-jiao-ben-shi-xian-zi-dong-geng-xin-wang-zhan/"/>
+    <id>https://jinxiqinghuan.github.io/2020/09/28/linux-jiao-ben-shi-li-jian-dan-jiao-ben-shi-xian-zi-dong-geng-xin-wang-zhan/</id>
+    <published>2020-09-28T01:56:00.000Z</published>
+    <updated>2020-10-10T05:38:43.188Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;简单shell脚本的编写实际非常简单，为了方便更新我的博客，所以用几分钟的时间完成了这个简单的shell脚本。它能够大大方便博客的更新。脚本内容如下：&lt;/p&gt;
+&lt;pre class=&quot; language-shell&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Shell" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/Shell/"/>
+    
+    
+      <category term="shell脚本" scheme="https://jinxiqinghuan.github.io/tags/shell%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pycharm入门手册</title>
+    <link href="https://jinxiqinghuan.github.io/2020/07/17/pycharm-ru-men-shou-ce/"/>
+    <id>https://jinxiqinghuan.github.io/2020/07/17/pycharm-ru-men-shou-ce/</id>
+    <published>2020-07-17T07:18:37.837Z</published>
+    <updated>2020-07-17T08:30:03.589Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要介绍pycharm的基本使用方法，并不是全面的pycharm使用教程，看完本文后能够搭建开发环境并进行简单的开发。本文以安装sklearn库为例。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://jinxiqinghuan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="https://jinxiqinghuan.github.io/tags/python/"/>
+    
+      <category term="pycharm" scheme="https://jinxiqinghuan.github.io/tags/pycharm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【转载】C++面试基础知识</title>
+    <link href="https://jinxiqinghuan.github.io/2020/04/14/zhuan-zai-c-mian-shi-ji-chu-zhi-shi/"/>
+    <id>https://jinxiqinghuan.github.io/2020/04/14/zhuan-zai-c-mian-shi-ji-chu-zhi-shi/</id>
+    <published>2020-04-14T13:47:09.283Z</published>
+    <updated>2020-10-13T11:14:26.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;
+📖 Github
+&amp;emsp;&amp;emsp; | &amp;emsp;&amp;emsp;
+&lt;a href=&quot;https://interview.huihut.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;📚
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C/C++" scheme="https://jinxiqinghuan.github.io/categories/C-C/"/>
+    
+    
+      <category term="C/C++" scheme="https://jinxiqinghuan.github.io/tags/C-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于博客图片存放问题提出的设想</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/29/guan-yu-bo-ke-tu-pian-de-cun-fang-wen-ti-ti-chu-de-she-xiang/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/29/guan-yu-bo-ke-tu-pian-de-cun-fang-wen-ti-ti-chu-de-she-xiang/</id>
+    <published>2020-03-29T08:45:04.508Z</published>
+    <updated>2020-03-29T09:09:39.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我是一个很有危机意识且没有安全感的人，虽然我的博客内容本身并不具有太多的价值，但是我还是将它保存了N分，云端本地都有着备份。&lt;/p&gt;
+&lt;p&gt;正是因为安全感使我遇到了一个问题，那就是博客图片的存放问题。很多博主直接使用免费的甚至是非专业的图床大概存储一下就可以了。我总是感觉这
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>斯坦福李飞飞教授计算机视觉课程笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/22/si-tan-fu-li-fei-fei-jiao-shou-ji-suan-ji-shi-jue-ke-cheng/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/22/si-tan-fu-li-fei-fei-jiao-shou-ji-suan-ji-shi-jue-ke-cheng/</id>
+    <published>2020-03-22T11:36:43.508Z</published>
+    <updated>2020-03-31T13:01:00.403Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文知识列举了一些我认为比较重要的点，有很多局限性与不足之处，该课程的参考笔记看查看“相关资料”。&lt;/p&gt;
+&lt;h3 id=&quot;一、图像分类——数据驱动方法&quot;&gt;&lt;a href=&quot;#一、图像分类——数据驱动方法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Python" scheme="https://jinxiqinghuan.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git冲突：commit your changes or stash them before you can merge. 解决办法</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/20/git-chong-tu-commit-your-changes-or-stash-them-before-you-can-merge.jie-jue-ban-fa/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/20/git-chong-tu-commit-your-changes-or-stash-them-before-you-can-merge.jie-jue-ban-fa/</id>
+    <published>2020-03-20T03:29:19.346Z</published>
+    <updated>2020-03-20T03:37:09.368Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;用git pull来更新代码的时候，遇到了下面的问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;error: Your local changes to the following files would be overwritten by merge:
+    ````(some
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://jinxiqinghuan.github.io/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://jinxiqinghuan.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo d失败及原因分析</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/19/hexo-d-shi-bai-ji-yuan-yin-fen-xi/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/19/hexo-d-shi-bai-ji-yuan-yin-fen-xi/</id>
+    <published>2020-03-19T15:58:08.783Z</published>
+    <updated>2020-11-29T05:49:32.846Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本来今天高高兴兴······&lt;/p&gt;
+&lt;p&gt;在github上找到了一个炫酷的主题，彻底的把它进行适配后，准备hexo d然后上床睡觉了。&lt;/p&gt;
+&lt;p&gt;结果······&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将博客部署到阿里云服务器</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/18/jiang-bo-ke-bu-shu-dao-a-li-yun-fu-wu-qi/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/18/jiang-bo-ke-bu-shu-dao-a-li-yun-fu-wu-qi/</id>
+    <published>2020-03-18T05:49:36.269Z</published>
+    <updated>2020-03-20T03:18:57.167Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;常用命令（只适用于我的主机）&quot;&gt;&lt;a href=&quot;#常用命令（只适用于我的主机）&quot; class=&quot;headerlink&quot; title=&quot;常用命令（只适用于我的主机）&quot;&gt;&lt;/a&gt;常用命令（只适用于我的主机）&lt;/h2&gt;&lt;p&gt;1.进入配置文件夹：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;cd /usr/local/webserver/nginx&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.查看nginx版本&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx -v&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.检查配置文件nginx.conf的正确性命令&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx -t&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4.重新载入配置文件&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx -s reload&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5.重启 Nginx(不建议使用，有时修改的配置不会生效)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx -s reopen&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;6.运行Nginx&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;6.停止 Nginx&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;/usr/local/webserver/nginx/sbin/nginx -s stop&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装PyQt5扩展工具时遇到的一些问题</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/15/an-zhuang-pyqt5-kuo-zhan-gong-ju-shi-yu-dao-de-yi-xie-wen-ti/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/15/an-zhuang-pyqt5-kuo-zhan-gong-ju-shi-yu-dao-de-yi-xie-wen-ti/</id>
+    <published>2020-03-15T05:26:03.921Z</published>
+    <updated>2020-03-18T09:58:36.323Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装PyQt5扩展工具时遇到的一些问题&quot;&gt;&lt;a href=&quot;#安装PyQt5扩展工具时遇到的一些问题&quot; class=&quot;headerlink&quot; title=&quot;安装PyQt5扩展工具时遇到的一些问题&quot;&gt;&lt;/a&gt;安装PyQt5扩展工具时遇到的一些问题&lt;/h2&gt;&lt;p&gt;首先具体安装步骤网上有很多教程，就不再叙述。&lt;/p&gt;
+&lt;p&gt;1.添加QtDesigner扩展工具时，没有在教程的相应文件夹中找到.exe文件。&lt;/p&gt;
+&lt;p&gt;最终在我的C:\Users\11966\AppData\Local\Programs\Python\Python37\Scripts\designer.exe中发现了这个文件，链接到这个文件，问题解决。&lt;/p&gt;
+&lt;p&gt;在使用QtDesigner设计化面板后，使用view code 命令再次出现类似问题，将无法链接的文件找到，然后根据它的提示放到指定的文件夹就可以了。&lt;img src=&quot;https://raw.githubusercontent.com/jinxiqinghuan/clodimage/master/img/%E6%8D%95%E8%8E%B7.PNG&quot; alt=&quot;从前边的文件夹中找到uic.exe文件，复制过来&quot;&gt;&lt;/p&gt;
+&lt;p&gt;此类问题应该是版本不一致导致的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://jinxiqinghuan.github.io/categories/python/"/>
+    
+    
+      <category term="PyQt5" scheme="https://jinxiqinghuan.github.io/tags/PyQt5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用的脱坑指南</title>
+    <link href="https://jinxiqinghuan.github.io/2020/03/10/chang-yong-de-tuo-keng-zhi-nan/"/>
+    <id>https://jinxiqinghuan.github.io/2020/03/10/chang-yong-de-tuo-keng-zhi-nan/</id>
+    <published>2020-03-10T08:18:11.046Z</published>
+    <updated>2020-03-20T03:50:50.702Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-pip下载慢、经常出错&quot;&gt;&lt;a href=&quot;#1-pip下载慢、经常出错&quot; class=&quot;headerlink&quot; title=&quot;1.pip下载慢、经常出错&quot;&gt;&lt;/a&gt;1.pip下载慢、经常出错&lt;/h4&gt;&lt;p&gt;可以切换下载源为国内源，比如:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;，这样就会从清华镜像安装pandas库。&lt;/p&gt;
+&lt;p&gt;永久修改方式，&lt;a href=&quot;https://blog.csdn.net/sinat_21591675/article/details/82770360&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点击这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://jinxiqinghuan.github.io/categories/python/"/>
+    
+    
+      <category term="tips" scheme="https://jinxiqinghuan.github.io/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客折腾记录</title>
+    <link href="https://jinxiqinghuan.github.io/2020/02/17/bo-ke-zhe-teng-ji-lu/"/>
+    <id>https://jinxiqinghuan.github.io/2020/02/17/bo-ke-zhe-teng-ji-lu/</id>
+    <published>2020-02-17T09:30:50.093Z</published>
+    <updated>2020-04-04T03:37:41.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;网站优化&quot;&gt;&lt;a href=&quot;#网站优化&quot; class=&quot;headerlink&quot; title=&quot;网站优化&quot;&gt;&lt;/a&gt;网站优化&lt;/h2&gt;&lt;p&gt;2020.3.1&lt;/p&gt;
+&lt;p&gt;采用主题Next，简洁美观&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;2020.3.20
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Hexo动态背景打开无效果</title>
+    <link href="https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/"/>
+    <id>https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/</id>
+    <published>2020-02-17T07:28:55.623Z</published>
+    <updated>2020-02-17T08:36:17.698Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;目前Hexo内置了两个动态背景效果，但是修改配置文件后却不显示效果。&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;/p&gt;
+&lt;p&gt;查看&lt;a href=&quot;https://github.com/theme-next/theme-next-canvas-nest&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方文档&lt;/a&gt;并按步骤操作。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
