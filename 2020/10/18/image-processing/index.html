@@ -30,8 +30,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"><link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
+</head>
 
 
 
@@ -372,7 +372,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-29
+                    2020-12-07
                 </div>
                 
 
@@ -481,6 +481,7 @@
 <h2 id="医学图像重建"><a href="#医学图像重建" class="headerlink" title="医学图像重建"></a>医学图像重建</h2><h4 id="拉东变换"><a href="#拉东变换" class="headerlink" title="拉东变换"></a>拉东变换</h4><p>拉东变换的原理：youtube讲解<a href="https://www.youtube.com/watch?v=MA2y_2YySq0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=MA2y_2YySq0</a></p>
 <p>在CT中间圆环是我们想要求的物体，左边是发射源能够发射一种射线，右边为感应器能够感应到射线的强弱，假设物体上每一点对射线的衰减程度为函数 [公式] ，根据射线穿过物体的衰减程度可以得到物体在该方向上每一点的衰弱强度（intensity），相当于每个方向上都可以测量出该物体的“厚度”，我们的目的就是，根据不同方向上的物体的“厚度”求出物体上每一点的衰减程度</p>
 <p><strong>通过二维中的一个点来理解拉东，然后扩展到三维。</strong></p>
+<p>能够实现拉东变换的一个python库，还能实现配准、分割等，Gustavo（美国弗吉尼亚大学）在第四届图像计算与数字医学国际研讨会上提出，地址：<a href="https://github.com/rohdelab/PyTransKit" target="_blank" rel="noopener">https://github.com/rohdelab/PyTransKit</a></p>
 <h2 id="医学图像配准"><a href="#医学图像配准" class="headerlink" title="医学图像配准"></a>医学图像配准</h2><h2 id="医学图像分割"><a href="#医学图像分割" class="headerlink" title="医学图像分割"></a>医学图像分割</h2><h4 id="区域生长算法"><a href="#区域生长算法" class="headerlink" title="区域生长算法"></a>区域生长算法</h4><p>代码实现：</p>
 <pre class=" language-c++"><code class="language-c++">#include <iostream>
 #include <opencv2/core.hpp>
@@ -613,6 +614,55 @@ g5<span class="token operator">=</span>I<span class="token punctuation">;</span>
 <span class="token function">g5</span><span class="token punctuation">(</span>g4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">;</span>
 figure<span class="token punctuation">;</span>
 <span class="token function">imshow</span><span class="token punctuation">(</span>g5<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">def</span> <span class="token function">water_demo</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+    blurred <span class="token operator">=</span> cv2<span class="token punctuation">.</span>pyrMeanShiftFiltering<span class="token punctuation">(</span>img<span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
+    gray <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>blurred<span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>COLOR_BGR2GRAY<span class="token punctuation">)</span>
+    ret<span class="token punctuation">,</span> binnary <span class="token operator">=</span> cv2<span class="token punctuation">.</span>threshold<span class="token punctuation">(</span>gray<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>THRESH_BINARY<span class="token operator">|</span>cv2<span class="token punctuation">.</span>THRESH_OTSU<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">"binnary"</span><span class="token punctuation">,</span>binnary<span class="token punctuation">)</span>
+    kerhel <span class="token operator">=</span> cv2<span class="token punctuation">.</span>getStructuringElement<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>MORPH_RECT<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    mb <span class="token operator">=</span> cv2<span class="token punctuation">.</span>morphologyEx<span class="token punctuation">(</span>binnary<span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>MORPH_OPEN<span class="token punctuation">,</span>kerhel<span class="token punctuation">,</span>iterations<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+    sure_bg <span class="token operator">=</span> cv2<span class="token punctuation">.</span>dilate<span class="token punctuation">(</span>mb<span class="token punctuation">,</span>kerhel<span class="token punctuation">,</span>iterations<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">"sure_bg"</span><span class="token punctuation">,</span>sure_bg<span class="token punctuation">)</span>
+
+    dist <span class="token operator">=</span> cv2<span class="token punctuation">.</span>distanceTransform<span class="token punctuation">(</span>mb<span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>DIST_L2<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+    dist_optput <span class="token operator">=</span> cv2<span class="token punctuation">.</span>normalize<span class="token punctuation">(</span>dist<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>NORM_MINMAX<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">"dist"</span><span class="token punctuation">,</span>dist_optput<span class="token operator">*</span><span class="token number">50</span><span class="token punctuation">)</span>
+    ret<span class="token punctuation">,</span> surface <span class="token operator">=</span> cv2<span class="token punctuation">.</span>threshold<span class="token punctuation">(</span>dist<span class="token punctuation">,</span>dist<span class="token punctuation">.</span>max<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.6</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span>cv2<span class="token punctuation">.</span>THRESH_BINARY<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">"surface"</span><span class="token punctuation">,</span>surface<span class="token punctuation">)</span>
+
+    surface_fg <span class="token operator">=</span> np<span class="token punctuation">.</span>uint8<span class="token punctuation">(</span>surface<span class="token punctuation">)</span>
+    unknown <span class="token operator">=</span> cv2<span class="token punctuation">.</span>subtract<span class="token punctuation">(</span>sure_bg<span class="token punctuation">,</span>surface_fg<span class="token punctuation">)</span>
+    ret<span class="token punctuation">,</span>markers<span class="token operator">=</span>cv2<span class="token punctuation">.</span>connectedComponents<span class="token punctuation">(</span>surface_fg<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+
+    markers <span class="token operator">=</span> markers<span class="token operator">+</span><span class="token number">1</span>
+    markers<span class="token punctuation">[</span>unknown <span class="token operator">==</span> <span class="token number">255</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
+    markers <span class="token operator">=</span>cv2<span class="token punctuation">.</span>watershed<span class="token punctuation">(</span>img<span class="token punctuation">,</span>markers <span class="token operator">=</span> markers<span class="token punctuation">)</span>
+    img<span class="token punctuation">[</span>markers <span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">]</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">"return"</span><span class="token punctuation">,</span>img<span class="token punctuation">)</span>
+
+
+img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">'10.jpg'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'binnary'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'sure_bg'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'dist'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'surface'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>namedWindow<span class="token punctuation">(</span><span class="token string">'return'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'binnary'</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'sure_bg'</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'dist'</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'surface'</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>resizeWindow<span class="token punctuation">(</span><span class="token string">'return'</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">320</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span>
+water_demo<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>waitKey<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>destroyAllWindows<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 <h2 id="模态转换"><a href="#模态转换" class="headerlink" title="模态转换"></a>模态转换</h2>
             </div>
             <hr/>
@@ -984,7 +1034,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.4k</span>&nbsp;字
+                class="white-color">57.5k</span>&nbsp;字
             
             
             

@@ -30,8 +30,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"><link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
+</head>
 
 
 
@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-29
+                    2020-12-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    498
+                    499
                 </div>
                 
 
@@ -582,7 +582,7 @@
 <p>logits, from_logits=True默认是false，要修改为True。</p>
 <h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><h4 id="什么是梯度？"><a href="#什么是梯度？" class="headerlink" title="什么是梯度？"></a>什么是梯度？</h4><p><img src="http://image.lijitao.top//image-20201127141909660.png" alt="image-20201127141909660"></p>
 <p>箭头代表梯度的方向，长短代表梯度的模的大小。最小值求的就是梯度下降的反方向。</p>
-<h2 id="Tensorflow基础"><a href="#Tensorflow基础" class="headerlink" title="Tensorflow基础"></a>Tensorflow基础</h2><h4 id="SometTips"><a href="#SometTips" class="headerlink" title="SometTips"></a>SometTips</h4><h5 id="GPU上数据和CPU上数据的转换"><a href="#GPU上数据和CPU上数据的转换" class="headerlink" title="GPU上数据和CPU上数据的转换"></a>GPU上数据和CPU上数据的转换</h5><p>将GPU上的数据和CPU上的数据进行运算会报错，因此要对其进行转换，很简单直接：</p>
+<h2 id="Some-tips-of-tensorflow"><a href="#Some-tips-of-tensorflow" class="headerlink" title="Some tips of tensorflow"></a>Some tips of tensorflow</h2><h4 id="GPU上数据和CPU上数据的转换"><a href="#GPU上数据和CPU上数据的转换" class="headerlink" title="GPU上数据和CPU上数据的转换"></a>GPU上数据和CPU上数据的转换</h4><p>将GPU上的数据和CPU上的数据进行运算会报错，因此要对其进行转换，很简单直接：</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> tf<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cpu'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     a <span class="token operator">=</span> tf<span class="token punctuation">.</span>constant<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token keyword">with</span> tf<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'gpu'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -1079,7 +1079,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.4k</span>&nbsp;字
+                class="white-color">57.5k</span>&nbsp;字
             
             
             
