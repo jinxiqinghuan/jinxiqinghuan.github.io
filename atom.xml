@@ -73,33 +73,6 @@
   </entry>
   
   <entry>
-    <title>IMAGE PROCESSING</title>
-    <link href="https://jinxiqinghuan.github.io/2020/11/08/andrew-ng-career-advice-reading-research-papers/"/>
-    <id>https://jinxiqinghuan.github.io/2020/11/08/andrew-ng-career-advice-reading-research-papers/</id>
-    <published>2020-11-08T12:17:06.000Z</published>
-    <updated>2020-11-08T12:18:06.506Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h2 id=&quot;数字图像处理（上海交大）&quot;&gt;&lt;a href=&quot;#数字图像处理（上海交大）&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Pytorch学习笔记</title>
     <link href="https://jinxiqinghuan.github.io/2020/10/23/pytorch-xue-xi-bi-ji/"/>
     <id>https://jinxiqinghuan.github.io/2020/10/23/pytorch-xue-xi-bi-ji/</id>
@@ -122,9 +95,9 @@
       <category term="深度学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
       <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
@@ -154,33 +127,6 @@
       <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
       <category term="OpenCV" scheme="https://jinxiqinghuan.github.io/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IMAGE PROCESSING</title>
-    <link href="https://jinxiqinghuan.github.io/2020/10/18/image-processing/"/>
-    <id>https://jinxiqinghuan.github.io/2020/10/18/image-processing/</id>
-    <published>2020-10-18T08:00:19.287Z</published>
-    <updated>2020-12-08T08:55:50.205Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h4 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
@@ -568,6 +514,57 @@
 &lt;p&gt;2020.3.20
         
       
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Hexo动态背景打开无效果</title>
+    <link href="https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/"/>
+    <id>https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/</id>
+    <published>2020-02-17T07:28:55.623Z</published>
+    <updated>2020-12-20T03:06:52.888Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;title: 解决Hexo动态背景打开无效果&lt;br&gt;categories: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端&lt;br&gt;tags:&lt;/li&gt;
+&lt;li&gt;博客&lt;/li&gt;
+&lt;li&gt;hexo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前Hexo内置了两个动态背景效果，但是修改配置文件后却不显示效果。&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;/p&gt;
+&lt;p&gt;查看&lt;a href=&quot;https://github.com/theme-next/theme-next-canvas-nest&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方文档&lt;/a&gt;并按步骤操作。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo常用命令</title>
+    <link href="https://jinxiqinghuan.github.io/2020/02/17/hexo-chang-yong-ming-ling/"/>
+    <id>https://jinxiqinghuan.github.io/2020/02/17/hexo-chang-yong-ming-ling/</id>
+    <published>2020-02-17T04:06:02.078Z</published>
+    <updated>2020-03-18T07:53:42.316Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/jaywcjlove/hexoThemeKacper&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;hexo 皮肤Github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://jslite.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;hexo 皮肤预览&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;hexo&quot;&gt;&lt;a href=&quot;#hexo&quot; class=&quot;headerlink&quot; title=&quot;hexo&quot;&gt;&lt;/a&gt;hexo&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;npm install hexo -g #安装  
+npm update hexo -g #升级  
+hexo init #初始化&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;简写&quot;&gt;&lt;a href=&quot;#简写&quot; class=&quot;headerlink&quot; title=&quot;简写&quot;&gt;&lt;/a&gt;简写&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hexo n &amp;quot;我的博客&amp;quot;&lt;/code&gt; == &lt;code&gt;hexo new &amp;quot;我的博客&amp;quot;&lt;/code&gt; #新建文章&lt;br&gt;&lt;code&gt;hexo p&lt;/code&gt; == &lt;code&gt;hexo publish&lt;/code&gt;&lt;br&gt;&lt;code&gt;hexo g&lt;/code&gt; == &lt;code&gt;hexo generate&lt;/code&gt;#生成&lt;br&gt;&lt;code&gt;hexo s&lt;/code&gt; == &lt;code&gt;hexo server&lt;/code&gt; #启动服务预览&lt;br&gt;&lt;code&gt;hexo d&lt;/code&gt; == &lt;code&gt;hexo deploy&lt;/code&gt;#部署&lt;/p&gt;
     
     </summary>
     
