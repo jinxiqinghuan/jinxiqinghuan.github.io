@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-07
+                    2020-12-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    499
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h3 id="线性回归问题"><a href="#线性回归问题" class="headerlink" title="线性回归问题"></a>线性回归问题</h3><p><img src="http://image.lijitao.top//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201119142612.jpg" alt="微信图片_20201119142612"></p>
+                <h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h3 id="线性回归问题"><a href="#线性回归问题" class="headerlink" title="线性回归问题"></a>线性回归问题</h3><p><img src="http://image.lijitao.top//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201119142612.jpg" alt="微信图片_20201119142612"></p>
 <p>代码实现：</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
@@ -596,6 +596,26 @@ aa <span class="token operator">=</span> a<span class="token punctuation">.</spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>aa<span class="token punctuation">.</span>device<span class="token punctuation">)</span>
 bb <span class="token operator">=</span> bb<span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>bb<span class="token punctuation">.</span>device<span class="token punctuation">)</span></code></pre>
+<h1 id="图像生成"><a href="#图像生成" class="headerlink" title="图像生成"></a>图像生成</h1><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li>医学图像模态转换</li>
+<li>在自动驾驶和具有视觉分析的机器人案例中，我们经常会将机器看到的Truth，转化成包含语义的图像。比如图像中障碍物用红色标注出来，障碍物用红色标注出来。<br><img src="http://image.lijitao.top//image-20201217165425568.png" alt="波士顿动力机器狗"></li>
+</ol>
+<h2 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>D和G可以比喻成赝品画家和买家、老师和学生的关系。</p>
+<p><strong>Step1</strong>: Fix generator G, and update discriminator D</p>
+<p>通过鉴别database中的数据和generator生成是数据来调整D的参数。</p>
+<p><strong>Step2</strong>: Fix discriminator D, and update generator G  </p>
+<p>通过生成“评分”更高的图片， 来更新generator的参数。</p>
+<p><img src="http://image.lijitao.top//image-20201207213111717.png" alt="image-20201207213111717"></p>
+<h4 id="判别式模型："><a href="#判别式模型：" class="headerlink" title="判别式模型："></a>判别式模型：</h4><ul>
+<li>模型学习的是条件概率分布P(Y|X)</li>
+<li>任务是从属性X（特征）预测标记Y（类别）<br>经典的判别式模型：<br>线性回归、逻辑回归、K近邻、支持向量机、决策树、条件随机场、boosting方法</li>
+</ul>
+<h4 id="生成式模型："><a href="#生成式模型：" class="headerlink" title="生成式模型："></a>生成式模型：</h4><ul>
+<li>模型学习的是联合概率分布P(X,Y)（生成式模型更难学习，联合概率分布）</li>
+<li>任务是得到属性为X且类别为Y时的联合概率<br>经典的生成式模型：<br>朴素贝叶斯、混合高斯模型、隐马尔可夫模型、贝叶斯网络、马尔科夫随机场、深度信念网络、变分自编码器</li>
+</ul>
+<h4 id="零和博弈"><a href="#零和博弈" class="headerlink" title="零和博弈"></a>零和博弈</h4><p>一方的收益必然意味着另一方的损失，博弈各方的收益和损失相加总和永远为“零”，双方不存在合作的可能。<br><strong>Minimax</strong>: 在零和博弈中，为了使己方得到最优解，所有把目标设为让对方的最大收益最小化。</p>
+<h4 id="GAN在图像融合中的应用"><a href="#GAN在图像融合中的应用" class="headerlink" title="GAN在图像融合中的应用"></a>GAN在图像融合中的应用</h4><p>在GAN提出论文中Figure3显示了通过在整个模型的z空间中的坐标之间线性插值来改变输出图像。这说明我们队生成器的输入随机噪声做改变的话，输出也会进行一个渐渐的变化。这个思想可以应用到图像融合中，把两个图像对应的G进行线性加权，这样他们生成的图像也是有这个生成加权的，会同时具有这两幅图像的特点。</p>
 
             </div>
             <hr/>
@@ -832,18 +852,17 @@ bb <span class="token operator">=</span> bb<span class="token punctuation">.</sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/19/ml/">
+                <a href="/2020/12/20/leetcode-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="ML">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="Leetcode刷题笔记">
                         
-                        <span class="card-title">ML</span>
+                        <span class="card-title">Leetcode刷题笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -853,31 +872,26 @@ bb <span class="token operator">=</span> bb<span class="token punctuation">.</sp
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
@@ -1079,7 +1093,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.5k</span>&nbsp;字
+                class="white-color">58.6k</span>&nbsp;字
             
             
             

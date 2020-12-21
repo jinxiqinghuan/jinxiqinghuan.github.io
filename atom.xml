@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2020-12-07T03:43:30.237Z</updated>
+  <updated>2020-12-20T10:06:14.346Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ML</title>
-    <link href="https://jinxiqinghuan.github.io/2020/11/19/ml/"/>
-    <id>https://jinxiqinghuan.github.io/2020/11/19/ml/</id>
-    <published>2020-11-19T06:08:05.250Z</published>
-    <updated>2020-12-07T03:43:30.237Z</updated>
+    <title>Leetcode刷题笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2020/12/20/leetcode-bi-ji/"/>
+    <id>https://jinxiqinghuan.github.io/2020/12/20/leetcode-bi-ji/</id>
+    <published>2020-12-20T03:06:37.401Z</published>
+    <updated>2020-12-20T10:06:14.346Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,34 @@
       
         
         
-          &lt;h1 id=&quot;ML&quot;&gt;&lt;a href=&quot;#ML&quot; class=&quot;headerlink&quot; title=&quot;ML&quot;&gt;&lt;/a&gt;ML&lt;/h1&gt;&lt;h3 id=&quot;线性回归问题&quot;&gt;&lt;a href=&quot;#线性回归问题&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;Easy&quot;&gt;&lt;a href=&quot;#Easy&quot; class=&quot;headerlink&quot; title=&quot;Easy&quot;&gt;&lt;/a&gt;Easy&lt;/h2&gt;&lt;h3 id=&quot;1-两数之和&quot;&gt;&lt;a href=&quot;#1-两数之和&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://jinxiqinghuan.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://jinxiqinghuan.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ML</title>
+    <link href="https://jinxiqinghuan.github.io/2020/11/19/ml/"/>
+    <id>https://jinxiqinghuan.github.io/2020/11/19/ml/</id>
+    <published>2020-11-19T06:08:05.250Z</published>
+    <updated>2020-12-17T09:09:07.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ML&quot;&gt;&lt;a href=&quot;#ML&quot; class=&quot;headerlink&quot; title=&quot;ML&quot;&gt;&lt;/a&gt;ML&lt;/h1&gt;&lt;h3 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分类&lt;/h3&gt;&lt;h3
         
       
     
@@ -135,7 +162,7 @@
     <link href="https://jinxiqinghuan.github.io/2020/10/18/image-processing/"/>
     <id>https://jinxiqinghuan.github.io/2020/10/18/image-processing/</id>
     <published>2020-10-18T08:00:19.287Z</published>
-    <updated>2020-12-07T03:19:17.698Z</updated>
+    <updated>2020-12-08T08:55:50.205Z</updated>
     
     <summary type="html">
     
@@ -143,7 +170,7 @@
       
         
         
-          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h2 id=&quot;数字图像处理（上海交大课程）&quot;&gt;&lt;a href=&quot;#数字图像处理（上海交大课程）&quot;
+          &lt;h1 id=&quot;图像处理&quot;&gt;&lt;a href=&quot;#图像处理&quot; class=&quot;headerlink&quot; title=&quot;图像处理&quot;&gt;&lt;/a&gt;图像处理&lt;/h1&gt;&lt;h4 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;
         
       
     
@@ -541,31 +568,6 @@
 &lt;p&gt;2020.3.20
         
       
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://jinxiqinghuan.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Hexo动态背景打开无效果</title>
-    <link href="https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/"/>
-    <id>https://jinxiqinghuan.github.io/2020/02/17/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/</id>
-    <published>2020-02-17T07:28:55.623Z</published>
-    <updated>2020-02-17T08:36:17.698Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;目前Hexo内置了两个动态背景效果，但是修改配置文件后却不显示效果。&lt;/p&gt;
-&lt;p&gt;解决方案：&lt;/p&gt;
-&lt;p&gt;查看&lt;a href=&quot;https://github.com/theme-next/theme-next-canvas-nest&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方文档&lt;/a&gt;并按步骤操作。&lt;/p&gt;
     
     </summary>
     

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux脚本示例——简单脚本实现自动更新博客, study">
+    <meta name="keywords" content="Leetcode刷题笔记, study">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux脚本示例——简单脚本实现自动更新博客 | 今夕清欢</title>
+    <title>Leetcode刷题笔记 | 今夕清欢</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/artitalk/artitalk.min.css">
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/favicon.png">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux脚本示例——简单脚本实现自动更新博客</h1>
+                    <h1 class="description center-align post-title">Leetcode刷题笔记</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/shell%E8%84%9A%E6%9C%AC/">
-                                <span class="chip bg-color">shell脚本</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
                     </div>
@@ -447,12 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/Shell/" class="post-category">
-                                Shell
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -464,21 +460,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-28
+                    2020-12-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-12-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    454
+                    573
                 </div>
                 
 
@@ -500,65 +496,118 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>简单shell脚本的编写实际非常简单，为了方便更新我的博客，所以用几分钟的时间完成了这个简单的shell脚本。它能够大大方便博客的更新。脚本内容如下：</p>
-<pre class=" language-shell"><code class="language-shell">#this shell script is to update my blog:  www.lijitao.top
-echo 'Update blog begin'
-echo '````````````````````'
-echo '````````````````````'
+                <h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><h3 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1.两数之和"></a>1.两数之和</h3><p>直接暴力遍历进行求解：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">==</span> j<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        <span class="token keyword">continue</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        <span class="token keyword">return</span> i<span class="token punctuation">,</span> j
+                        <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">continue</span></code></pre>
+<p>大神的解法：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        num <span class="token operator">=</span> nums<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        n <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span> len<span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            i <span class="token operator">=</span> num<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            n <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">if</span> target<span class="token operator">-</span>i <span class="token keyword">in</span> num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>nums<span class="token punctuation">.</span>index<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>num<span class="token punctuation">.</span>index<span class="token punctuation">(</span>target<span class="token operator">-</span>i<span class="token punctuation">)</span><span class="token operator">+</span>n<span class="token punctuation">]</span></code></pre>
+<h3 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7.整数反转"></a>7.整数反转</h3><p>我的解法：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">reverse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            x <span class="token operator">=</span> str<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">:</span>
+            x <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+            x <span class="token operator">=</span> <span class="token string">'-'</span> <span class="token operator">+</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+            x <span class="token operator">=</span>  int<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'-'</span><span class="token punctuation">:</span>
+            x <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+            x <span class="token operator">=</span>  int<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> x <span class="token keyword">if</span> <span class="token operator">-</span><span class="token number">2147483648</span> <span class="token operator">&lt;</span> x <span class="token operator">&lt;</span> <span class="token number">2147483647</span> <span class="token keyword">else</span> <span class="token number">0</span>
+</code></pre>
+<p>大神的解法：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reverse_better</span><span class="token punctuation">(</span>
+        self<span class="token punctuation">,</span> 
+        x<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
 
-cd /usr/local/webserver/nginx/blog
-echo 'Load path succeeded '
-echo ''''''''''''''''''''''
-echo '````````````````````'
-
-
-git reset --hard
-echo 'Complete rollbach version'
-echo '````````````````````'
-echo '````````````````````'
-
-echo 'Pulling from github'
-echo '````````````````````'
-echo '````````````````````'
-git pull https://github.com/jinxiqinghuan/jinxiqinghuan.github.io
-echo 'Pulling succeeded!!!!'
-echo '````````````````````'
-echo '````````````````````'
-
-echo 'Go back home!'
-cd /root
-echo 'Everythin is done!!!'
-echo 'SEE YOU!!!!!!!!!!!!!'</code></pre>
-<p>当然这个脚本废话有点多，其实核心代码需要这几行就够了：</p>
-<pre class=" language-shell"><code class="language-shell">#this shell script is to update my blog:  www.lijitao.top
-cd /usr/local/webserver/nginx/blog
-git reset --hard
-git pull https://github.com/jinxiqinghuan/jinxiqinghuan.github.io
-cd /root</code></pre>
-<p>编写完成后，使用chmod 755命令更改文件的权限，添加可执行权限。</p>
-<p>可以根据需要随意在文档中编写自己想执行的shell命令。</p>
-<p>如果不想每次更新博客都手动更新，可以设置自动执行。</p>
-<p>1.安装crontab</p>
-<pre class=" language-shell"><code class="language-shell">yum install cixie-cron
-yum install crontabs</code></pre>
-<p>2.开启crontab服务</p>
-<pre class=" language-shell"><code class="language-shell">service crond start //启动服务
-service crond stop //关闭服务
-service crond restart //重启服务
-service crond status   //查看crontab服务状态：</code></pre>
-<p>3.设置脚本</p>
-<pre class=" language-shell"><code class="language-shell">命令行输入:crontab -e 进入后编写想要执行的脚本
-*/1 * * * * /opt/ 每一分钟执行一次
-*/5 * * * * /opt/ 每五分钟执行一次
-0 */1 * * * /opt/ 每小时执行一次
-30 1 * * * /opt/ 每天1:30执行一次
-0 23-7/2，8 * * * 晚上11点到早上8点之间每两个小时和早上八点
-0 11 4 * 1-3 每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点
-22 4 * * 0 每星期（周日凌晨4：22）执行
-42 4 1 * * 每月（1号凌晨4：42）去执行
-
-test</code></pre>
-
+        y<span class="token punctuation">,</span> res <span class="token operator">=</span> abs<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span>
+        <span class="token comment" spellcheck="true"># 则其数值范围为 [−2^31,  2^31 − 1]</span>
+        boundry <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">31</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> x<span class="token operator">></span><span class="token number">0</span> <span class="token keyword">else</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">31</span>
+        <span class="token keyword">while</span> y <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            res <span class="token operator">=</span> res<span class="token operator">*</span><span class="token number">10</span> <span class="token operator">+</span>y<span class="token operator">%</span><span class="token number">10</span>
+            <span class="token keyword">if</span> res <span class="token operator">></span> boundry <span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token number">0</span>
+            y <span class="token operator">//=</span><span class="token number">10</span>
+        <span class="token keyword">return</span> res <span class="token keyword">if</span> x <span class="token operator">></span><span class="token number">0</span> <span class="token keyword">else</span> <span class="token operator">-</span>res</code></pre>
+<h3 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9.回文数"></a>9.回文数</h3><p>这道题让我最自己的智商产生了严重的怀疑，，，<br>我最开始是这样做的：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        x <span class="token operator">=</span> str<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span>int<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token punctuation">(</span>int<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span>int<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token punctuation">(</span>int<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span>int<span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token punctuation">(</span>int<span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span></code></pre>
+<p>最终答案还是有一些问题，因为通过判断奇数和偶数对半索引有很多不同的地方，导致代码不仅一大堆if else语句，逻辑也不是很清晰。<br>换一个思路：<br>通过判断字符串逆转之后和原来是否相等就可以了。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        x <span class="token operator">=</span> str<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        tmp <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">==</span> tmp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span></code></pre>
+<p>进阶：不转化字符串，如何判断：</p>
+<p>解法二：数学解法</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//边界判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> div <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">/</span> div <span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">)</span> div <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> left <span class="token operator">=</span> x <span class="token operator">/</span> div<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> right <span class="token operator">=</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">!=</span> right<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> div<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>
+            div <span class="token operator">/=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>解法三：巧妙解法</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//思考：这里大家可以思考一下，为什么末尾为 0 就可以直接返回 false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> revertedNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">></span> revertedNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            revertedNumber <span class="token operator">=</span> revertedNumber <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+            x <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> x <span class="token operator">==</span> revertedNumber <span class="token operator">||</span> x <span class="token operator">==</span> revertedNumber <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h2><h2 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h2>
             </div>
             <hr/>
 
@@ -573,7 +622,7 @@ test</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">qinghuan</a>
+                    <a href="/about" rel="external nofollow noreferrer">清欢</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -583,7 +632,7 @@ test</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jinxiqinghuan.github.io/2020/09/28/linux-jiao-ben-shi-li-jian-dan-jiao-ben-shi-xian-zi-dong-geng-xin-wang-zhan/">https://jinxiqinghuan.github.io/2020/09/28/linux-jiao-ben-shi-li-jian-dan-jiao-ben-shi-xian-zi-dong-geng-xin-wang-zhan/</a>
+                    <a href="https://jinxiqinghuan.github.io/2020/12/20/leetcode-bi-ji/">https://jinxiqinghuan.github.io/2020/12/20/leetcode-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -596,7 +645,7 @@ test</code></pre>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">qinghuan</a>
+                    <a href="/about" target="_blank">清欢</a>
                     !
                 </span>
             </div>
@@ -621,8 +670,8 @@ test</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/shell%E8%84%9A%E6%9C%AC/">
-                                    <span class="chip bg-color">shell脚本</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
                         </div>
@@ -790,17 +839,18 @@ test</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/12/wu-lian-wang-ji-zhu-zai-nong-ye-zhong-de-ying-yong/">
+                <a href="/2020/12/20/leetcode-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="物联网技术在农业中的应用">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="Leetcode刷题笔记">
                         
-                        <span class="card-title">物联网技术在农业中的应用</span>
+                        <span class="card-title">Leetcode刷题笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -810,16 +860,29 @@ test</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            qinghuan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -831,31 +894,31 @@ test</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/17/pycharm-ru-men-shou-ce/">
+                <a href="/2020/11/19/ml/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="Pycharm入门手册">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="ML">
                         
-                        <span class="card-title">Pycharm入门手册</span>
+                        <span class="card-title">ML</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文主要介绍pycharm的基本使用方法，并不是全面的pycharm使用教程，看完本文后能够搭建开发环境并进行简单的开发。本文以安装sklearn库为例。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -865,12 +928,12 @@ test</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/pycharm/">
-                        <span class="chip bg-color">pycharm</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
