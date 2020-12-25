@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2020-12-24T03:37:02.540Z</updated>
+  <updated>2020-12-25T09:14:50.757Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>服务器内网穿透和SSH搭建教程</title>
+    <link href="https://jinxiqinghuan.github.io/2020/12/25/fu-wu-qi-nei-wang-chuan-tou-he-ssh-da-jian-jiao-cheng/"/>
+    <id>https://jinxiqinghuan.github.io/2020/12/25/fu-wu-qi-nei-wang-chuan-tou-he-ssh-da-jian-jiao-cheng/</id>
+    <published>2020-12-25T07:05:59.387Z</published>
+    <updated>2020-12-25T09:14:50.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最新发现了一些很好玩的东西，以后很可能还会用到，因此记录下来。&lt;/p&gt;
+&lt;p&gt;机器学习使用Windows环境总是遇到很多稀奇古怪的问题，使用Linux系统可以减少大量的Debug时间。但是由于最近使用的Linux主机是实验室公用的，搭建远程连接环境就十分有必要了。SSH内网
+        
+      
+    
+    </summary>
+    
+    
+      <category term="服务器" scheme="https://jinxiqinghuan.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="服务器" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="SSH" scheme="https://jinxiqinghuan.github.io/tags/SSH/"/>
+    
+      <category term="内网穿透" scheme="https://jinxiqinghuan.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>人生路口</title>
     <link href="https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/"/>
     <id>https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/</id>
     <published>2020-12-24T02:18:35.294Z</published>
-    <updated>2020-12-24T03:37:02.540Z</updated>
+    <updated>2020-12-25T09:26:24.986Z</updated>
     
     <summary type="html">
     
@@ -545,27 +577,6 @@ hexo init #初始化&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;简写&quot;&gt;&lt
     
     
       <category term="Git" scheme="https://jinxiqinghuan.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++通讯录管理系统</title>
-    <link href="https://jinxiqinghuan.github.io/2020/12/23/c-shi-xian-tong-xun-lu-guan-li-xi-tong/"/>
-    <id>https://jinxiqinghuan.github.io/2020/12/23/c-shi-xian-tong-xun-lu-guan-li-xi-tong/</id>
-    <published>2020-12-23T12:34:56.905Z</published>
-    <updated>2020-07-17T07:29:39.380Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;跟着B站黑马程序员的视频，练习了一个简单的通讯录管理项目。这个项目只涉及基本的C语言知识，意在练习项目设计的具体过程。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="https://jinxiqinghuan.github.io/categories/C/"/>
-    
-    
-      <category term="C++" scheme="https://jinxiqinghuan.github.io/tags/C/"/>
     
   </entry>
   
