@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2020-12-20T03:06:52.888Z</updated>
+  <updated>2020-12-24T03:37:02.540Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人生路口</title>
+    <link href="https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/"/>
+    <id>https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/</id>
+    <published>2020-12-24T02:18:35.294Z</published>
+    <updated>2020-12-24T03:37:02.540Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;低着头，在路上走了太久，已经太久没有停下来思考了。&lt;/p&gt;
+&lt;p&gt;创建公众号的初衷，是想找一个向外部世界表达的出口。但我并不是一个擅长表达的人，有太多的情绪想要表达了，迷茫、悲伤和愤怒。我大概是患上了《挪威的森林》里直子所说的那种失语症，内心的情绪很多，但要把它们组织成语言
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://jinxiqinghuan.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://jinxiqinghuan.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Hexo动态背景打开无效果</title>
@@ -538,34 +566,6 @@ hexo init #初始化&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;简写&quot;&gt;&lt
     
     
       <category term="C++" scheme="https://jinxiqinghuan.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#学习笔记</title>
-    <link href="https://jinxiqinghuan.github.io/2020/12/23/c-xue-xi-bi-ji/"/>
-    <id>https://jinxiqinghuan.github.io/2020/12/23/c-xue-xi-bi-ji/</id>
-    <published>2020-12-23T12:34:56.883Z</published>
-    <updated>2020-10-18T08:03:39.408Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;p&gt;title: ‘C#学习笔记’&lt;br&gt;categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;‘C#’&lt;br&gt;tags:&lt;/li&gt;
-&lt;li&gt;‘C#’&lt;/li&gt;
-&lt;li&gt;学习笔记系列&lt;br&gt;date: 2020-09-27
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   

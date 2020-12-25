@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="斯坦福李飞飞教授计算机视觉课程笔记, study">
+    <meta name="keywords" content="人生路口, study">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>斯坦福李飞飞教授计算机视觉课程笔记 | 今夕清欢</title>
+    <title>人生路口 | 今夕清欢</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/artitalk/artitalk.min.css">
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/favicon.png">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">斯坦福李飞飞教授计算机视觉课程笔记</h1>
+                    <h1 class="description center-align post-title">人生路口</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -451,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                机器学习
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
                             </a>
                         
                     </div>
@@ -464,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-23
+                    2020-12-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-31
+                    2020-12-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    624
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    2 分
                 </div>
                 
 
@@ -500,154 +496,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文知识列举了一些我认为比较重要的点，有很多局限性与不足之处，该课程的参考笔记看查看“相关资料”。</p>
-<h3 id="一、图像分类——数据驱动方法"><a href="#一、图像分类——数据驱动方法" class="headerlink" title="一、图像分类——数据驱动方法"></a>一、图像分类——数据驱动方法</h3><p>图像中对于目标物的遮挡、背景色、运动等情况，都要求识别的算法需要有良好的鲁棒性；</p>
-<p>识别图像的时候有一种思路是利用图形的边缘信息能够反映信息的特点，比如一个猫的图片中，可以看出这些线条反映出这是一种猫。(就像我们的简笔画一样，用简单的几条线条，来画一只猫、狗···)</p>
-<p><img src="http://image.lijitao.top/%E7%94%A8%E7%BA%BF%E6%9D%A1%E6%9D%A5%E8%A1%A8%E7%A4%BA%E7%8C%AB.PNG" alt=""></p>
-<p>但是这只能是针对猫的算法，如果换成另一个实体，算法就会失效。采用数据驱动的方式，可以解决这个问题。</p>
-<p>通过搜集大量预先已经标记好的数据集，输入给机器后，机器用”某种方式“生成一个模型，使用它就能识别这些种类的实体。</p>
-<p>我们的API就变成了这样：</p>
-<p><strong>训练函数：</strong>用来接收图片和标签，然后输出模型；</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">train</span><span class="token punctuation">(</span>images<span class="token punctuation">,</span>labels<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#Machine learning!</span>
-    <span class="token keyword">return</span> model</code></pre>
-<p><strong>预测函数：</strong>接收这个模型，对图片种类进行预测。</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">predict</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> test_images<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#Use model to predict labels</span>
-    <span class="token keyword">return</span> test_labels</code></pre>
-<p>正是采用了这种方法，图形识别领域的进步很大。这种数据驱动的算法是比深度学习更广义的一种理念。</p>
-<p>对比图片的方法（曼哈顿距离）：</p>
-<h3 id="二、K最近邻算法-KNN-："><a href="#二、K最近邻算法-KNN-：" class="headerlink" title="二、K最近邻算法(KNN)："></a>二、K最近邻算法(KNN)：</h3><p>曼哈顿距离L1（像素之间绝对值的总和）：</p>
-<p><img src="http://image.lijitao.top/%E5%AF%B9%E6%AF%94%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95.PNG" alt=""></p>
-<p>Q: N个实例的训练和测试速度有多快？</p>
-<p>A：训练 O(1)    测试O(N)</p>
-<p>测试的时候只需要存储数据，无论数据集多大，都是一个恒定的时间（待理解）</p>
-<p>测试需要将数据集的N个训练实例与测试对比，是一个很慢的过程。</p>
-<p>而在实际应用中我们的期望与之相反。</p>
-<p>实际应用中最近邻算法的表现：</p>
-<p><img src="http://image.lijitao.top/%E6%9C%80%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E9%99%85%E8%A1%A8%E7%8E%B0.PNG" alt=""></p>
-<p>欧式距离L2（取平方和的平方根，并把它作为距离）：</p>
-<p><img src="http://image.lijitao.top/L1%E5%92%8CL2%E7%9A%84%E5%AF%B9%E6%AF%94.PNG" alt=""></p>
-<p>L1受坐标轴的影响，坐标轴改变，两点间的L1距离（可能）也会改变，而L2不受影响。</p>
-<p>L1更合适：如果你输入的特征向量中的一些值，有些重要意义（比如员工的姓名、工资、年龄···数据有着对应关系时）</p>
-<p>L2更合适：这个向量只是通用向量，不知道其中元素的含义</p>
-<p>具体问题可以都尝试一下，找出最适合的。</p>
-<p>KNN可视化演示：<a href="http://vision.stanford.edu/teaching/cs231n-demos/knn/" target="_blank" rel="noopener">http://vision.stanford.edu/teaching/cs231n-demos/knn/</a></p>
-<p>KNN可视化代码实现：<a href="https://blog.csdn.net/u014556057/article/details/81286608" target="_blank" rel="noopener">https://blog.csdn.net/u014556057/article/details/81286608</a></p>
-<p><strong>超参数：</strong>K 和距离度量，不一定都能从训练数据中学到，人为提前的做出设定。这些参数是以来与具体问题的，尝试修改超参数并找出解决具体问题最合适的那一组。</p>
-<p><img src="http://image.lijitao.top/%E8%B6%85%E5%8F%82%E7%9A%84%E9%80%89%E5%8F%96.PNG" alt=""></p>
-<p><del>Idea #1</del>： K = 1 总是最完美的，K取更大的值会出现一些错误，但是对于训练集中未出现的数据分类性能更佳。</p>
-<p><del>Idea #2</del>： 训练集和测试集选择不同的超参，可能会尝试出一组比较好的超参，但这样做是没有意义的。</p>
-<p>Idea #3： 大部分数据做训练集，然后建立一个验证集和一个测试集。训练集用不同的超参来训练算法，在验证集上进行评估，然后通过这种方式找出表现最好的一组超参。完成这一切后，把表现最好的分类器拿出来，在测试集上跑一跑，<strong>这才是你要写到论文中的数据</strong>。  这个才能表现出你的算法在未见的数据集上的表现如何。</p>
-<p><img src="http://image.lijitao.top/K%E5%80%BC%E7%9A%84%E9%80%89%E5%8F%96%E4%B8%8E%E5%87%86%E7%A1%AE%E7%8E%87.PNG" alt=""></p>
-<p><strong>交叉验证：</strong>小数据集中更常用而深度学习中不那么常用。首先预留测试训练集，剩余数据分为五份，四份训练，一份验证，依次交换次序，选出更好的超参。</p>
-<p><img src="http://image.lijitao.top/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81.PNG" alt=""></p>
-<p>KKN用来处理图像并不合适：</p>
-<p><img src="http://image.lijitao.top/KNNL2%E5%BD%A2%E5%90%8C%E7%9A%84%E5%80%BC.PNG" alt=""></p>
-<p>三张图片有着形同的L2值，L2很难表现图像之间的数据感知差异。</p>
-<p><strong>维度灾难</strong>：训练所需要的计算随着维度的增加而指数上升。</p>
-<p><img src="http://image.lijitao.top/%E7%BB%B4%E5%BA%A6%E7%81%BE%E9%9A%BE.PNG" alt=""></p>
-<h3 id="三、线性分类"><a href="#三、线性分类" class="headerlink" title="三、线性分类"></a>三、线性分类</h3><p>  线性分类就像是乐高中的基础模块，它通过把图片拉伸成长向量（公式中的x），参数矩阵W作为列向量，把它们作为输入。</p>
-<p><img src="http://image.lijitao.top/1.PNG" alt="">))</p>
-<p>然后它们会转换成10个数字评分，这十分数字评分就对应了图片在下图中十个数据集里的评分（评分越高就越有可能是这个分类），线性分类器可以解释成每个种类的学习模板。不同的数据集种类的数量会影响偏执值。</p>
-<p><img src="http://image.lijitao.top/2.%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B.PNG" alt=""></p>
-<p><img src="http://image.lijitao.top/3%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%8E%9F%E7%90%86.PNG" alt=""></p>
-<p>线性分类器难以解决的问题：奇数和偶数的问题  、多分类问题（一个类别出现在不同的领域空间中，比如上述案例中的马匹朝左右两边看会被生成一个两个头的模型）、 </p>
-<p><img src="http://image.lijitao.top/4%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8%E9%9A%BE%E4%BB%A5%E8%A7%A3%E5%86%B3%E6%8A%80%E6%9C%AF%E5%92%8C%E5%81%B6%E6%95%B0%E7%9A%84%E9%97%AE%E9%A2%98.PNG" alt=""></p>
-<p>线性分类器基础概念详解：    <a href="https://blog.csdn.net/weixin_38278334/article/details/82831541" target="_blank" rel="noopener">link1</a>        <a href="https://www.cnblogs.com/xuanyuyt/p/5993982.html" target="_blank" rel="noopener">link2</a></p>
-<h3 id="四、损失函数及其优化"><a href="#四、损失函数及其优化" class="headerlink" title="四、损失函数及其优化"></a>四、损失函数及其优化</h3><p><strong>铰链损失函数、交叉熵损失函数：</strong>    <a href="https://blog.csdn.net/fendegao/article/details/79968994" target="_blank" rel="noopener">link</a></p>
-<p><strong>W值的选取：</strong></p>
-<p>可以通过人为的观察数据来选取，但更明智的方法是采用损失函数来评估W的表现。</p>
-<p>SVM损失函数：把W值当做输入，根据得分来定量的衡量W值的表现。</p>
-<p>代码实现：</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">L_i_vectorized</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> W<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    scores <span class="token operator">=</span> w<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-    margins <span class="token operator">=</span> np<span class="token punctuation">.</span>maximum<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> scores <span class="token operator">-</span> scores<span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    margins<span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
-    loss_i <span class="token operator">=</span> np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>margins<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> loss_i</code></pre>
-<p><img src="http://image.lijitao.top/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97%E5%8E%9F%E7%90%86.PNG" alt=""></p>
-<p>损失函数计算图</p>
-<p><img src="http://image.lijitao.top/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97%E5%9B%BE.PNG" alt=""></p>
-<p>相关概念：对数似然函数（<a href="https://www.bilibili.com/video/BV1K7411W7So?t=1357&p=3" target="_blank" rel="noopener">链接</a>35:00）</p>
-<p><strong>优化损失函数：</strong></p>
-<p>方法一：随机选择权重，猜出一个比较合适的值，但这种方法比较不稳定（<strong>论文思路</strong>）</p>
-<p>方法二：求导，就像下山一样，随着坡度向下</p>
-<p><img src="http://image.lijitao.top/%E6%8D%95%E8%8E%B7.PNG" alt=" "></p>
-<p>实际情况中常使用解析解，使用数值解来进行检查。</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#Vanilla Gradient Descent</span>
-<span class="token keyword">while</span> true<span class="token punctuation">:</span>
-    weights_grad <span class="token operator">=</span> evaluate_gradient<span class="token punctuation">(</span>loss_fun<span class="token punctuation">,</span> data<span class="token punctuation">,</span> weights<span class="token punctuation">)</span>
-    weights <span class="token operator">+=</span> <span class="token operator">-</span> step_size <span class="token operator">*</span> weights_grad    <span class="token comment" spellcheck="true">#perform parameter update</span></code></pre>
-<p>step_size如果过小会导致训练时间太长，效率低；step_size如果过大则会导致振荡甚至找不到最优点。（动态演示见斯坦福大学课程官网网页）</p>
-<p>Stochastic Gradient Descent(SGD)优化器弊端：容易陷入局部良好的点，但不是所求的最优点。</p>
-<p>当数据集过于庞大时，可以分步一点点的“喂”（一般约定俗成为2的指数个）：</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#Vanilla Minibatch Gradient Descent</span>
-<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
-    data_batch <span class="token operator">=</span> sample_training_data<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">#sample 256 examples</span>
-    weights_grad <span class="token operator">=</span> evaluate_gradint<span class="token punctuation">(</span>loss_fun<span class="token punctuation">,</span> data_batch<span class="token punctuation">,</span> weights<span class="token punctuation">)</span>
-    weights <span class="token operator">+=</span> <span class="token operator">-</span> step_size <span class="token operator">*</span> weights_grad     <span class="token comment" spellcheck="true">#perform parameterdate</span></code></pre>
-<p>深度学习模型例如卷积神经网络不需要人为的构建特征，只需要喂给这些系统大量的数据，便能通过一些列的卷积和其他运算中自动勾践某一个类的特征。（数据驱动）</p>
-<p>传统计算机视觉算法：HOG、SIGT特征提取（需要人为的构建特征）</p>
-<p>深度学习算法：CNN（端到端、数据驱动、学习得到特征）</p>
-<h3 id="五、神经网络"><a href="#五、神经网络" class="headerlink" title="五、神经网络"></a>五、神经网络</h3><p><strong>激活函数</strong>: 让一个线性分类器产生一个非线性输出（sigmoid、tanh、ReL、Maxout、ELU）</p>
-<p>如果没有非线性激活函数，无论堆叠多少层都是线性的</p>
-<p><strong>反向传播：</strong></p>
-<p>通过计算图可以利用反向传播技术递归的调用链式法则来计算计算图中每个变量的梯度。</p>
-<p>两层的神经网络代码：</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">from</span> numpy<span class="token punctuation">.</span>random <span class="token keyword">import</span> randn
-
-N<span class="token punctuation">,</span> D_in<span class="token punctuation">,</span> H<span class="token punctuation">,</span> D_out <span class="token operator">=</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span>
-x<span class="token punctuation">,</span> y <span class="token operator">=</span> randn<span class="token punctuation">(</span>N<span class="token punctuation">,</span> D_in<span class="token punctuation">)</span><span class="token punctuation">,</span> randn<span class="token punctuation">(</span>N<span class="token punctuation">,</span> D_out<span class="token punctuation">)</span>
-w1<span class="token punctuation">,</span> w2 <span class="token operator">=</span> randn<span class="token punctuation">(</span>D_in<span class="token punctuation">,</span> H<span class="token punctuation">)</span><span class="token punctuation">,</span> randn<span class="token punctuation">(</span>H<span class="token punctuation">,</span> D_out<span class="token punctuation">)</span>
-
-<span class="token keyword">for</span> t <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-   h <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>x<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>w1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-   y_pred <span class="token operator">=</span> h<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>w2<span class="token punctuation">)</span>
-   loss <span class="token operator">=</span> np<span class="token punctuation">.</span>square<span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span>sum<span class="token punctuation">(</span><span class="token punctuation">)</span>
-   <span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span> loss<span class="token punctuation">)</span>
-
-   grad_y_pred <span class="token operator">=</span> <span class="token number">2.0</span> <span class="token operator">*</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span>
-   grad_w2 <span class="token operator">=</span> h<span class="token punctuation">.</span>T<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>grad_y_pred<span class="token punctuation">)</span>
-   grad_h <span class="token operator">=</span> grad_y_pred<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>w2<span class="token punctuation">.</span>T<span class="token punctuation">)</span>
-   grad_w1 <span class="token operator">=</span> x<span class="token punctuation">.</span>T<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>grad_h <span class="token operator">*</span> h <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> h<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-   w1 <span class="token operator">-=</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">4</span> <span class="token operator">*</span> grad_w1
-   w2 <span class="token operator">-=</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">4</span> <span class="token operator">*</span> grad_w2</code></pre>
-<p><strong>卷积神经网络(CNN):</strong> 它与常规神经网络的构想基本一致，不同的是需要训练卷积层，因为卷积层能够更好的保留输入的空间结构。</p>
-<p>过程：卷积 —&gt; 下采样（池化）—&gt; 全连接</p>
-<p>卷积层进行特征的抽取，池化层进行泛化，全连接层把提取到的各种特征进行汇总和交融。</p>
-<p><img src="http://image.lijitao.top/%E5%8D%B7%E7%A7%AF%E7%9A%84%E8%BF%87%E7%A8%8B.PNG" alt=""></p>
-<p>这些层采用多个卷积核，每个卷积核会产生一个激活映射，来作为下一层的输入：</p>
-<p><img src="http://image.lijitao.top/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%A4%9A%E4%B8%AA%E5%8D%B7%E7%A7%AF%E5%9D%97%E5%B7%A5%E4%BD%9C%E7%A4%BA%E6%84%8F%E5%9B%BE.PNG" alt=""></p>
-<p>采用多层卷积层池化层能够丰富得到的信息：</p>
-<p><img src="http://image.lijitao.top/%E5%A4%9A%E5%B1%82%E5%8D%B7%E7%A7%AF%E5%AF%B9%E4%B8%B0%E5%AF%8C%E5%BE%97%E5%88%B0%E7%9A%84%E7%89%B9%E5%BE%81.PNG" alt=""></p>
-<p>如果不进行边缘填补，同时又存在多层神经网络时，会导致逐层缩小，会损失大量信息。填补0虽然是人为，但是不会改变图片本身的信息。</p>
-<p>卷积过程可视化页面:     <a href="https://github.com/thomelane/thomelane.github.io" target="_blank" rel="noopener">页面1</a>    <a href="https://ezyang.github.io/convolution-visualizer/index.html" target="_blank" rel="noopener">页面2</a></p>
-<p>为什么要进行卷积：</p>
-<p>卷积核其实就相当于定义了一个特征，卷积的过程可以检测图像每个部分与卷积核定义特征的相似程度（示意图<a href="http://image.lijitao.top/对图像进行卷积处理的原因.PNG" target="_blank" rel="noopener">链接</a>），也可以利用以下方式来模糊和检测边缘：</p>
-<p><img src="http://image.lijitao.top/%E5%AF%B9%E5%9B%BE%E5%83%8F%E8%BF%9B%E8%A1%8C%E5%8D%B7%E7%A7%AF%E5%A4%84%E7%90%86%E7%9A%84%E5%8E%9F%E5%9B%A02.PNG" alt=""></p>
-<p>不同的卷积核能够提取图片不同的特征：</p>
-<p><img src="http://image.lijitao.top/%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8D%B7%E7%A7%AF%E6%A0%B8%E8%83%BD%E5%A4%9F%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%8D%E5%90%8C%E7%89%B9%E5%BE%81.PNG" alt=""></p>
-<p>卷积神经网络保持平移、缩放、变形不变性的原因：</p>
-<ul>
-<li><strong>局部感受野</strong>    每个神经元仅与输入神经元的一块区域连接，这块局部区域称作感受野（receptive field）。局部连接的思想，也是受启发于生物学里面的视觉系统结构，视觉皮层的神经元就是局部接受信息的。</li>
-<li><strong>权值共享</strong>    卷积核是共享的</li>
-<li><strong>下采样、池化</strong>    减少参数，防止过拟合</li>
-</ul>
-<p><strong>1 x 1 卷积的作用：</strong></p>
-<ol>
-<li>降维或升维</li>
-<li>跨通道信息交融</li>
-<li>减少参数量（减少运算量）</li>
-<li>增加模型深度，提高非线性表示能力</li>
-</ol>
-<p><strong>目前神经网络发展的趋势：</strong>更小的卷积核，更深的网络。更少的池化层和全连接层，以减少信息的丢失，使用全卷积网络（FCN）。</p>
-<p><strong>相关演示网页：</strong> <a href="https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html" target="_blank" rel="noopener">cifar10</a>    <a href="https://transcranial.github.io/keras-js/#/mnist-cnn" target="_blank" rel="noopener">MNIST</a>    <a href="http://yosinski.com/deepvis#toolbox" target="_blank" rel="noopener">Visualizing Activations</a>        <a href="http://projector.tensorflow.org/" target="_blank" rel="noopener">Other</a> </p>
-<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><p>[1]. 课程官方地址：<a href="http://cs231n.stanford.edu/syllabus.html" target="_blank" rel="noopener">http://cs231n.stanford.edu/syllabus.html</a></p>
-<p>[2]. 哔哩哔哩课程视频地址：<a href="https://www.bilibili.com/video/av76633310?p=5" target="_blank" rel="noopener">https://www.bilibili.com/video/av76633310?p=5</a></p>
-<p>[3]. 官方笔记的中文翻译（2016年版）：<a href="https://zhuanlan.zhihu.com/p/21930884" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/21930884</a></p>
+                <p>低着头，在路上走了太久，已经太久没有停下来思考了。</p>
+<p>创建公众号的初衷，是想找一个向外部世界表达的出口。但我并不是一个擅长表达的人，有太多的情绪想要表达了，迷茫、悲伤和愤怒。我大概是患上了《挪威的森林》里直子所说的那种失语症，内心的情绪很多，但要把它们组织成语言就困难了。这篇推文不算是文章，只能算是今年的流水账和总结吧。</p>
+<p>今年的选择，不可谓不丰富。因为刚好在人生的路口，随便一个选择可能都是一种人生。调剂回临大或者西北，去苏州或者天津工作。四个选择刚好囊括了中国的东南西北方。</p>
+<p>在今年疫情刚刚得到控制，企业刚刚复工的时候，我踏上了去苏州打工的路途。选择苏州的这家公司并不是因为它的待遇或者前途最好，而是因为它是我的第一份Offer。我总是这样，大部分时候是理性，但很多重要的决定都是感性来做的，即使理想告诉感性，这样可能不是最佳方案。记忆中的南方，是淅淅沥沥的雨，遍布城市的河，高高的屋檐以及雨巷里丁香一样的姑娘，现代化让整个中国的城市都极其的相似。不过细心一点，它们都是有自己的特色的。比如，我甚至无法去隔壁小区买东西，各种迷宫和死胡同。在苏州的半个月里，每天做饭，学习，隔离，生活也算十分的悠然自得。从第一天连面条都烧不出来，到后来的每顿两三个菜，不得不佩服自己的适应能力。</p>
+<p>后来便是阴差阳错出了国家线，刚好过线，去青岛某家公司人力资源部实习的经历。从青岛北站下车，听到熟悉的山东话的那一刻，那种亲切在听了半个月南方话后感受的更为具体。至今很感谢索老师选择我，让我有了一段难忘的经历。之前虽然去车间打过工，也去小区当过保安，但接触的只是社会的很小的一面。索老师在这几个月里教会我的太多，</p>
 
             </div>
             <hr/>
@@ -663,7 +516,7 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">qinghuan</a>
+                    <a href="/about" rel="external nofollow noreferrer">清欢</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -673,7 +526,7 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jinxiqinghuan.github.io/2020/12/23/si-tan-fu-li-fei-fei-jiao-shou-ji-suan-ji-shi-jue-ke-cheng/">https://jinxiqinghuan.github.io/2020/12/23/si-tan-fu-li-fei-fei-jiao-shou-ji-suan-ji-shi-jue-ke-cheng/</a>
+                    <a href="https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/">https://jinxiqinghuan.github.io/2020/12/24/nian-du-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -686,7 +539,7 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">qinghuan</a>
+                    <a href="/about" target="_blank">清欢</a>
                     !
                 </span>
             </div>
@@ -711,12 +564,8 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -884,17 +733,18 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/23/wu-lian-wang-ji-zhu-zai-nong-ye-zhong-de-ying-yong/">
+                <a href="/2020/12/24/nian-du-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="物联网技术在农业中的应用">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="人生路口">
                         
-                        <span class="card-title">物联网技术在农业中的应用</span>
+                        <span class="card-title">人生路口</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -904,16 +754,29 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            qinghuan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -925,21 +788,27 @@ w1<span class="token punctuation">,</span> w2 <span class="token operator">=</sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/23/chang-yong-de-tuo-keng-zhi-nan/">
+                <a href="/2020/12/23/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="常用的脱坑指南">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="解决Hexo动态背景打开无效果">
                         
-                        <span class="card-title">常用的脱坑指南</span>
+                        <span class="card-title">解决Hexo动态背景打开无效果</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.pip下载慢、经常出错可以切换下载源为国内源，比如:
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas，这样就会从清华镜像安装pandas库。
-永久修改方式，点
+                            title: 解决Hexo动态背景打开无效果categories: 
+
+前端tags:
+博客
+hexo
+
+目前Hexo内置了两个动态背景效果，但是修改配置文件后却不显示效果。
+解决方案：
+查看官方文档并按步骤操作。
                         
                     </div>
                     <div class="publish-info">
@@ -948,23 +817,11 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas，这样就会从
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            qinghuan
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/tips/">
-                        <span class="chip bg-color">tips</span>
-                    </a>
-                    
                 </div>
                 
             </div>
