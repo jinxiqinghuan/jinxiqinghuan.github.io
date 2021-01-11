@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2021-01-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -502,6 +502,74 @@
             <div id="articleContent">
                 <h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h3 id="线性回归问题"><a href="#线性回归问题" class="headerlink" title="线性回归问题"></a>线性回归问题</h3><p><img src="http://image.lijitao.top//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201119142612.jpg" alt="微信图片_20201119142612"></p>
 <p>代码实现：</p>
+<p>$y = wx$：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pylab <span class="token keyword">as</span> plt
+
+x_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
+y_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">6.0</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> x <span class="token operator">*</span> w
+
+<span class="token keyword">def</span> <span class="token function">loss</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  y_pred <span class="token operator">=</span> forward<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
+
+w_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+mse_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> w <span class="token keyword">in</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">4.1</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"w="</span><span class="token punctuation">,</span> w<span class="token punctuation">)</span>
+  l_sum <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">for</span> x_val<span class="token punctuation">,</span> y_val <span class="token keyword">in</span> zip<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> y_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y_pred_val <span class="token operator">=</span> forward<span class="token punctuation">(</span>x_val<span class="token punctuation">)</span>
+    loss_val <span class="token operator">=</span> loss<span class="token punctuation">(</span>x_val<span class="token punctuation">,</span> y_val<span class="token punctuation">)</span>
+    l_sum <span class="token operator">+=</span> loss_val
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t'</span><span class="token punctuation">,</span> x_val<span class="token punctuation">,</span> y_val<span class="token punctuation">,</span> y_pred_val<span class="token punctuation">,</span> loss_val<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"MSE="</span><span class="token punctuation">,</span> l_sum <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span>
+  w_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>w<span class="token punctuation">)</span>
+  mse_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>l_sum <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre>
+<p>$y = wx +b :$</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># y = 2x + 3.2</span>
+<span class="token triple-quoted-string string">"""
+x 1 2 3 4 
+y 5 7 9 11
+"""</span>
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pylab <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>mplot3d <span class="token keyword">import</span> Axes3D
+
+
+x_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">]</span>
+y_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5.2</span><span class="token punctuation">,</span> <span class="token number">7.2</span><span class="token punctuation">,</span> <span class="token number">9.2</span><span class="token punctuation">,</span> <span class="token number">11.2</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y_hat <span class="token operator">=</span> x <span class="token operator">*</span> w <span class="token operator">+</span> b
+    <span class="token keyword">return</span> y_hat
+
+<span class="token keyword">def</span> <span class="token function">loss</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  y_pred <span class="token operator">=</span> forward<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
+
+mse_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+w <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span><span class="token number">4.1</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span><span class="token number">4.1</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span>w<span class="token punctuation">,</span>b<span class="token punctuation">]</span><span class="token operator">=</span>np<span class="token punctuation">.</span>meshgrid<span class="token punctuation">(</span>w<span class="token punctuation">,</span>b<span class="token punctuation">)</span>
+
+l_sum <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> x_val<span class="token punctuation">,</span> y_val <span class="token keyword">in</span> zip<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> y_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y_pred_val <span class="token operator">=</span> forward<span class="token punctuation">(</span>x_val<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">#print(y_pred_val)</span>
+    loss_val <span class="token operator">=</span> loss<span class="token punctuation">(</span>x_val<span class="token punctuation">,</span> y_val<span class="token punctuation">)</span>
+    l_sum <span class="token operator">+=</span> loss_val
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> Axes3D<span class="token punctuation">(</span>fig<span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>plot_surface<span class="token punctuation">(</span>w<span class="token punctuation">,</span> b<span class="token punctuation">,</span> l_sum<span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>other version:</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 <span class="token comment" spellcheck="true"># data = []</span>
@@ -574,14 +642,86 @@
     run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>交叉熵更适用于分类，MSE更适用于回归。</p>
 <h4 id="MSE"><a href="#MSE" class="headerlink" title="MSE"></a>MSE</h4><p><img src="https://img-blog.csdnimg.cn/20190117221013657.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NTEyMjk1,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>BCE:</p>
+<p><img src="http://image.lijitao.top//image-20210110221147748.png" alt="image-20210110221147748"></p>
+<p>经常用在二分类问题</p>
 <h4 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h4><p><a href="https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/information-entropy" target="_blank" rel="noopener">https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/information-entropy</a></p>
 <p><img src="http://image.lijitao.top//image-20201127135006535.png" alt="image-20201127135006535"></p>
 <p>logits ——&gt; CrossEntropy</p>
 <p><img src="http://image.lijitao.top//image-20201127135434323.png" alt="image-20201127135434323"></p>
 <p> 经过Softmax进行CrossEntropy时，会出现数值不稳定的情况（NAN）,实际编程中直接在tf.losses.categorical_crossentropy([0,1], logits, from_logits=True)，</p>
 <p>logits, from_logits=True默认是false，要修改为True。</p>
+<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>在河工大深度学习课件中有一个链接</p>
 <h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><h4 id="什么是梯度？"><a href="#什么是梯度？" class="headerlink" title="什么是梯度？"></a>什么是梯度？</h4><p><img src="http://image.lijitao.top//image-20201127141909660.png" alt="image-20201127141909660"></p>
 <p>箭头代表梯度的方向，长短代表梯度的模的大小。最小值求的就是梯度下降的反方向。</p>
+<h4 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h4><pre class=" language-python"><code class="language-python">x_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
+y_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">6.0</span><span class="token punctuation">]</span>
+
+w <span class="token operator">=</span> <span class="token number">1.0</span>
+learning_rate <span class="token operator">=</span> <span class="token number">0.01</span>
+
+<span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">*</span>w
+
+<span class="token keyword">def</span> <span class="token function">cost</span><span class="token punctuation">(</span>xs<span class="token punctuation">,</span> ys<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cost <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> x<span class="token punctuation">,</span> y <span class="token keyword">in</span> zip<span class="token punctuation">(</span>xs<span class="token punctuation">,</span> ys<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        y_pred <span class="token operator">=</span> forward<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        cost <span class="token operator">+=</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span> <span class="token operator">**</span><span class="token number">2</span>
+        <span class="token keyword">return</span> cost <span class="token operator">/</span> len<span class="token punctuation">(</span>xs<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">gradient</span><span class="token punctuation">(</span>xs<span class="token punctuation">,</span> ys<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    grad <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> x<span class="token punctuation">,</span> y <span class="token keyword">in</span> zip<span class="token punctuation">(</span>xs<span class="token punctuation">,</span> ys<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        grad <span class="token operator">+=</span> <span class="token number">2</span> <span class="token operator">*</span> x <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">*</span> w <span class="token operator">-</span> y<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> grad <span class="token operator">/</span> len<span class="token punctuation">(</span>xs<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Predict (before training)"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> forward<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+cost_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+epoch_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> epoch <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cost_val <span class="token operator">=</span> cost<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> y_data<span class="token punctuation">)</span>
+    grad_val <span class="token operator">=</span> gradient<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> y_data<span class="token punctuation">)</span>
+    w <span class="token operator">-=</span> learning_rate <span class="token operator">*</span> grad_val
+    cost_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cost_val<span class="token punctuation">)</span>
+    epoch_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>epoch<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Epoch:"</span><span class="token punctuation">,</span> epoch<span class="token punctuation">,</span> <span class="token string">"w = "</span><span class="token punctuation">,</span> w<span class="token punctuation">,</span> <span class="token string">"loss = "</span><span class="token punctuation">,</span> cost_val<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Predict (after traing)"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> forward<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#显示</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>epoch_list<span class="token punctuation">,</span> cost_list<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epoch'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><p>反向传播推导：</p>
+<p>$y = w * x:$</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> torch
+
+x_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
+y_data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">6.0</span><span class="token punctuation">]</span>
+w <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+w<span class="token punctuation">.</span>requires_grad <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">*</span> w
+
+<span class="token keyword">def</span> <span class="token function">loss</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y_pred <span class="token operator">=</span> forward<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'训练前：'</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> forward<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> epoch <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> x<span class="token punctuation">,</span> y <span class="token keyword">in</span> zip<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> y_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        l <span class="token operator">=</span> loss<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+        l<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true"># print(x, y, w.grad.item())</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"w.data"</span><span class="token punctuation">,</span>w<span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token string">"w.grad.data"</span><span class="token punctuation">,</span>  w<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        w<span class="token punctuation">.</span>data <span class="token operator">=</span> w<span class="token punctuation">.</span>data <span class="token operator">-</span> <span class="token number">0.01</span> <span class="token operator">*</span> w<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>data
+        w<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>data<span class="token punctuation">.</span>zero_<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>epoch<span class="token punctuation">,</span> l<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> forward<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <h2 id="Some-tips-of-tensorflow"><a href="#Some-tips-of-tensorflow" class="headerlink" title="Some tips of tensorflow"></a>Some tips of tensorflow</h2><h4 id="GPU上数据和CPU上数据的转换"><a href="#GPU上数据和CPU上数据的转换" class="headerlink" title="GPU上数据和CPU上数据的转换"></a>GPU上数据和CPU上数据的转换</h4><p>将GPU上的数据和CPU上的数据进行运算会报错，因此要对其进行转换，很简单直接：</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> tf<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cpu'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     a <span class="token operator">=</span> tf<span class="token punctuation">.</span>constant<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -616,6 +756,7 @@ bb <span class="token operator">=</span> bb<span class="token punctuation">.</sp
 </ul>
 <h4 id="零和博弈"><a href="#零和博弈" class="headerlink" title="零和博弈"></a>零和博弈</h4><p>一方的收益必然意味着另一方的损失，博弈各方的收益和损失相加总和永远为“零”，双方不存在合作的可能。<br><strong>Minimax</strong>: 在零和博弈中，为了使己方得到最优解，所有把目标设为让对方的最大收益最小化。</p>
 <h4 id="GAN在图像融合中的应用"><a href="#GAN在图像融合中的应用" class="headerlink" title="GAN在图像融合中的应用"></a>GAN在图像融合中的应用</h4><p>在GAN提出论文中Figure3显示了通过在整个模型的z空间中的坐标之间线性插值来改变输出图像。这说明我们队生成器的输入随机噪声做改变的话，输出也会进行一个渐渐的变化。这个思想可以应用到图像融合中，把两个图像对应的G进行线性加权，这样他们生成的图像也是有这个生成加权的，会同时具有这两幅图像的特点。</p>
+<h1 id="杂七乱八"><a href="#杂七乱八" class="headerlink" title="杂七乱八"></a>杂七乱八</h1><h4 id="1-格拉姆矩阵"><a href="#1-格拉姆矩阵" class="headerlink" title="1. 格拉姆矩阵"></a>1. 格拉姆矩阵</h4><h4 id="2-随机梯度下降"><a href="#2-随机梯度下降" class="headerlink" title="2. 随机梯度下降"></a>2. 随机梯度下降</h4><p>随机梯度下降是指只使用一个样本，下降速度更快。目前普遍采用的是mini batch的方法。</p>
 
             </div>
             <hr/>
@@ -1097,7 +1238,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">58k</span>&nbsp;字
+                class="white-color">58.9k</span>&nbsp;字
             
             
             

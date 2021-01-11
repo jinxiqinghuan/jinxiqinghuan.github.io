@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决Hexo动态背景打开无效果, study">
+    <meta name="keywords" content="Some Tips Of Python Programming, study">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决Hexo动态背景打开无效果 | 今夕清欢</title>
+    <title>Some Tips Of Python Programming | 今夕清欢</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/artitalk/artitalk.min.css">
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/favicon.png">
@@ -300,7 +300,7 @@
 <script src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '79ef3b75ccfe04433a98357aca54c6d2aa83c393576a4182105fdaba0f0c1360';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决Hexo动态背景打开无效果</h1>
+                    <h1 class="description center-align post-title">Some Tips Of Python Programming</h1>
                 </div>
             </div>
         </div>
@@ -433,12 +433,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -447,21 +460,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-23
+                    2020-12-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-09
+                    2021-01-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    64
+                    202
                 </div>
                 
 
@@ -483,16 +496,40 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 解决Hexo动态背景打开无效果<br>categories: </p>
-<ul>
-<li>前端<br>tags:</li>
-<li>博客</li>
-<li>hexo</li>
-</ul>
-<p>目前Hexo内置了两个动态背景效果，但是修改配置文件后却不显示效果。</p>
-<p>解决方案：</p>
-<p>查看<a href="https://github.com/theme-next/theme-next-canvas-nest" target="_blank" rel="noopener">官方文档</a>并按步骤操作。</p>
-<a id="more"></a>
+                <h4 id="1-使用argparse为python运行添加参数"><a href="#1-使用argparse为python运行添加参数" class="headerlink" title="1.使用argparse为python运行添加参数"></a>1.使用argparse为python运行添加参数</h4><p>使用这个库可以在运行的时候，通过添加参数来修改代码中的某些变量</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> argparse
+
+parse <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span><span class="token punctuation">)</span>
+parse<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--test"</span><span class="token punctuation">,</span> type<span class="token operator">=</span>int<span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span> help<span class="token operator">=</span><span class="token string">"这是一个测试"</span><span class="token punctuation">)</span>
+opt <span class="token operator">=</span> parse<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>opt<span class="token punctuation">.</span>test<span class="token punctuation">)</span>
+</code></pre>
+<p>在cmd中运行时， python test.py –test 666 可以修改变量test的值为666, 默认为300.</p>
+<h4 id="2-magic-method-call"><a href="#2-magic-method-call" class="headerlink" title="2.magic method __ call __()"></a>2.magic method __ call __()</h4><p>有时候我们在定义函数的时候，并不知道将来插入参数的个数</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+
+func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"t"</span><span class="token punctuation">,</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre>
+<p>输出：(1, 2, 3, 4, ‘t’)</p>
+<p>or </p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>kwargs<span class="token punctuation">)</span>
+
+func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"t"</span><span class="token punctuation">,</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">)</span></code></pre>
+<p>输出： (1, 2, 3, 4, ‘t’)<br>            {‘x’: 3, ‘y’: 5}</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foobar</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">def</span> <span class="token function">__call__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello"</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+foobar <span class="token operator">=</span> Foobar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+foobar<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre>
+<p>输出： Hello1</p>
 
             </div>
             <hr/>
@@ -508,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">qinghuan</a>
+                    <a href="/about" rel="external nofollow noreferrer">清欢</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -518,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jinxiqinghuan.github.io/2020/12/23/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/">https://jinxiqinghuan.github.io/2020/12/23/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/</a>
+                    <a href="https://jinxiqinghuan.github.io/2020/12/28/some-tips-of-python-programming/">https://jinxiqinghuan.github.io/2020/12/28/some-tips-of-python-programming/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -531,7 +568,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">qinghuan</a>
+                    <a href="/about" target="_blank">清欢</a>
                     !
                 </span>
             </div>
@@ -555,7 +592,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -721,17 +762,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/24/nian-du-zong-jie/">
+                <a href="/2020/12/28/some-tips-of-python-programming/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="人生路口">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="Some Tips Of Python Programming">
                         
-                        <span class="card-title">人生路口</span>
+                        <span class="card-title">Some Tips Of Python Programming</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,26 +783,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -774,13 +817,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/23/wu-lian-wang-ji-zhu-zai-nong-ye-zhong-de-ying-yong/">
+                <a href="/2020/12/25/fu-wu-qi-nei-wang-chuan-tou-he-ssh-da-jian-jiao-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="物联网技术在农业中的应用">
+                        <img src="https://cdn.jsdelivr.net/gh/jinxiqinghuan/jinxiqinghuan.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="服务器内网穿透和SSH搭建教程">
                         
-                        <span class="card-title">物联网技术在农业中的应用</span>
+                        <span class="card-title">服务器内网穿透和SSH搭建教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -791,15 +834,35 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            qinghuan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-category">
+                                    服务器
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+                        <span class="chip bg-color">内网穿透</span>
+                    </a>
+                    
                 </div>
                 
             </div>

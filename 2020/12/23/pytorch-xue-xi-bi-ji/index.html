@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-24
+                    2021-01-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    874
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -716,6 +716,30 @@ grads <span class="token operator">=</span> autograd<span class="token punctuati
 <p>输出：</p>
 <pre class=" language-python"><code class="language-python">before<span class="token punctuation">:</span>  None None None
 after tensor<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">)</span> tensor<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span> tensor<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span></code></pre>
+<h4 id="Tensorflow-Board-使用"><a href="#Tensorflow-Board-使用" class="headerlink" title="Tensorflow Board 使用"></a>Tensorflow Board 使用</h4><p>参考了这篇文章  <a href="https://zhuanlan.zhihu.com/p/58961505" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58961505</a> </p>
+<p>安装：</p>
+<pre class=" language-cmd"><code class="language-cmd">pip install tensorboard
+pip install tensorflow
+pip install tensorboardX</code></pre>
+<p>但提示路径错误，查看tensoboard -h 后发现官方命令中tensorboard –logdir = C:\Users\huangxin1\PycharmProjects\untitled\runs</p>
+<p>没有等于号，去掉后即可正常显示。</p>
+<h4 id="Relu函数的使用"><a href="#Relu函数的使用" class="headerlink" title="Relu函数的使用"></a>Relu函数的使用</h4><p>在河工大课程中提到，使用Relu函数作为激活函数也会存在一些问题，比如小于0时会计算ln0的情况，一般将最后一个设置为sigmoid函数会使得结果曲线更光滑。</p>
+<h3 id="Pytorch-函数特性篇"><a href="#Pytorch-函数特性篇" class="headerlink" title="Pytorch 函数特性篇"></a>Pytorch 函数特性篇</h3><h4 id="python-magic-method-call"><a href="#python-magic-method-call" class="headerlink" title="python magic method call()"></a>python magic method <strong>call</strong>()</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">LinearModel</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        super<span class="token punctuation">(</span>LinearModel<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true"># "nn" means neural network </span>
+        self<span class="token punctuation">.</span>linear <span class="token operator">=</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># 自定义的model类中必须要重写forward</span>
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        y_pred <span class="token operator">=</span> self<span class="token punctuation">.</span>linear<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> y_pred
+
+<span class="token comment" spellcheck="true"># model是callable的，可以直接被调用</span>
+model <span class="token operator">=</span> LinearModel<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="http://image.lijitao.top//image-20210110171037763.png" alt="image-20210110171037763"></p>
+<p>关于magic method  __ call __ 的用法可以参考Some Tips of Python Programming一文。</p>
 
             </div>
             <hr/>
@@ -1197,7 +1221,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">58k</span>&nbsp;字
+                class="white-color">58.9k</span>&nbsp;字
             
             
             

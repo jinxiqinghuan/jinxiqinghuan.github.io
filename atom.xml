@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2020-12-25T09:14:50.757Z</updated>
+  <updated>2021-01-10T09:14:24.309Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Some Tips Of Python Programming</title>
+    <link href="https://jinxiqinghuan.github.io/2020/12/28/some-tips-of-python-programming/"/>
+    <id>https://jinxiqinghuan.github.io/2020/12/28/some-tips-of-python-programming/</id>
+    <published>2020-12-28T03:51:23.922Z</published>
+    <updated>2021-01-10T09:14:24.309Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-使用argparse为python运行添加参数&quot;&gt;&lt;a href=&quot;#1-使用argparse为python运行添加参数&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://jinxiqinghuan.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://jinxiqinghuan.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>服务器内网穿透和SSH搭建教程</title>
@@ -81,7 +108,7 @@
     <link href="https://jinxiqinghuan.github.io/2020/12/23/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/"/>
     <id>https://jinxiqinghuan.github.io/2020/12/23/jie-jue-hexo-dong-tai-bei-jing-da-kai-wu-xiao-guo/</id>
     <published>2020-12-23T12:34:57.383Z</published>
-    <updated>2020-12-20T03:06:52.888Z</updated>
+    <updated>2021-01-09T10:19:44.801Z</updated>
     
     <summary type="html">
     
@@ -362,7 +389,7 @@
     <link href="https://jinxiqinghuan.github.io/2020/12/23/pytorch-xue-xi-bi-ji/"/>
     <id>https://jinxiqinghuan.github.io/2020/12/23/pytorch-xue-xi-bi-ji/</id>
     <published>2020-12-23T12:34:57.168Z</published>
-    <updated>2020-10-24T06:10:45.677Z</updated>
+    <updated>2021-01-10T14:18:34.910Z</updated>
     
     <summary type="html">
     
@@ -443,7 +470,7 @@
     <link href="https://jinxiqinghuan.github.io/2020/12/23/ml/"/>
     <id>https://jinxiqinghuan.github.io/2020/12/23/ml/</id>
     <published>2020-12-23T12:34:57.126Z</published>
-    <updated>2020-12-17T09:09:07.508Z</updated>
+    <updated>2021-01-11T04:15:22.493Z</updated>
     
     <summary type="html">
     
@@ -548,35 +575,6 @@ hexo init #初始化&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;简写&quot;&gt;&lt
       <category term="博客" scheme="https://jinxiqinghuan.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="https://jinxiqinghuan.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git冲突：commit your changes or stash them before you can merge. 解决办法</title>
-    <link href="https://jinxiqinghuan.github.io/2020/12/23/git-chong-tu-commit-your-changes-or-stash-them-before-you-can-merge.jie-jue-ban-fa/"/>
-    <id>https://jinxiqinghuan.github.io/2020/12/23/git-chong-tu-commit-your-changes-or-stash-them-before-you-can-merge.jie-jue-ban-fa/</id>
-    <published>2020-12-23T12:34:56.960Z</published>
-    <updated>2020-03-20T03:37:09.368Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;用git pull来更新代码的时候，遇到了下面的问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;error: Your local changes to the following files would be overwritten by merge:
-    ````(some
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://jinxiqinghuan.github.io/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="https://jinxiqinghuan.github.io/tags/Git/"/>
     
   </entry>
   
