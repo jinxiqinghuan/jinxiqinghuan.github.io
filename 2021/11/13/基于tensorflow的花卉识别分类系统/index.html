@@ -30,7 +30,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -847,7 +849,7 @@ threads <span class="token operator">=</span> tf<span class="token punctuation">
             <span class="token keyword">else</span><span class="token punctuation">:</span>
                 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'No checkpoint file found'</span><span class="token punctuation">)</span>
 
-            prediction <span class="token operator">=</span> sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>logit<span class="token punctuation">,</span> feed_dict<span class="token operator">=</span><span class="token punctuation">&#123;</span>x<span class="token punctuation">:</span> image_array<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+            prediction <span class="token operator">=</span> sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>logit<span class="token punctuation">,</span> feed_dict<span class="token operator">=</span><span class="token punctuation">{</span>x<span class="token punctuation">:</span> image_array<span class="token punctuation">}</span><span class="token punctuation">)</span>
             max_index <span class="token operator">=</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>prediction<span class="token punctuation">)</span>
             <span class="token keyword">if</span> max_index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
                 result <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'这是玫瑰花的可能性为： %.6f'</span> <span class="token operator">%</span> prediction<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -1139,10 +1141,12 @@ threads <span class="token operator">=</span> tf<span class="token punctuation">
                     <div class="summary block-with-text">
                         
                             常用命令（只适用于我的主机）1.进入配置文件夹：
-cd &#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx
+cd /usr/local/webserver/nginx
 
 2.查看nginx版本
-&#x2F;usr&#x2F;local&#x2F;webser
+/usr/local/webserver/nginx/sbin/nginx -v
+
+3.检查配置文件ng
                         
                     </div>
                     <div class="publish-info">

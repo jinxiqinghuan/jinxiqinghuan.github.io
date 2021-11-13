@@ -31,7 +31,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -469,40 +471,40 @@
             <div id="articleContent">
                 <p>简单shell脚本的编写实际非常简单，为了方便更新我的博客，所以用几分钟的时间完成了这个简单的shell脚本。它能够大大方便博客的更新。脚本内容如下：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#this shell script is to update my blog:  www.lijitao.top
-echo &#39;Update blog begin&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
+echo 'Update blog begin'
+echo '````````````````````'
+echo '````````````````````'
 
-cd &#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;blog
-echo &#39;Load path succeeded &#39;
-echo &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
+cd /usr/local/webserver/nginx/blog
+echo 'Load path succeeded '
+echo ''''''''''''''''''''''
+echo '````````````````````'
 
 
 git reset --hard
-echo &#39;Complete rollbach version&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
+echo 'Complete rollbach version'
+echo '````````````````````'
+echo '````````````````````'
 
-echo &#39;Pulling from github&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
-git pull https:&#x2F;&#x2F;github.com&#x2F;jinxiqinghuan&#x2F;jinxiqinghuan.github.io
-echo &#39;Pulling succeeded!!!!&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
-echo &#39;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#96;&#39;
+echo 'Pulling from github'
+echo '````````````````````'
+echo '````````````````````'
+git pull https://github.com/jinxiqinghuan/jinxiqinghuan.github.io
+echo 'Pulling succeeded!!!!'
+echo '````````````````````'
+echo '````````````````````'
 
-echo &#39;Go back home!&#39;
-cd &#x2F;root
-echo &#39;Everythin is done!!!&#39;
-echo &#39;SEE YOU!!!!!!!!!!!!!&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+echo 'Go back home!'
+cd /root
+echo 'Everythin is done!!!'
+echo 'SEE YOU!!!!!!!!!!!!!'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>当然这个脚本废话有点多，其实核心代码需要这几行就够了：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#this shell script is to update my blog:  www.lijitao.top
-cd &#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;blog
+cd /usr/local/webserver/nginx/blog
 git reset --hard
-git pull https:&#x2F;&#x2F;github.com&#x2F;jinxiqinghuan&#x2F;jinxiqinghuan.github.io
-cd &#x2F;root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+git pull https://github.com/jinxiqinghuan/jinxiqinghuan.github.io
+cd /root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>编写完成后，使用chmod 755命令更改文件的权限，添加可执行权限。</p>
 <p>可以根据需要随意在文档中编写自己想执行的shell命令。</p>
@@ -512,18 +514,18 @@ cd &#x2F;root<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 yum install crontabs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>2.开启crontab服务</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">service crond start &#x2F;&#x2F;启动服务
-service crond stop &#x2F;&#x2F;关闭服务
-service crond restart &#x2F;&#x2F;重启服务
-service crond status   &#x2F;&#x2F;查看crontab服务状态：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">service crond start //启动服务
+service crond stop //关闭服务
+service crond restart //重启服务
+service crond status   //查看crontab服务状态：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>3.设置脚本</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">命令行输入:crontab -e 进入后编写想要执行的脚本
-*&#x2F;1 * * * * &#x2F;opt&#x2F; 每一分钟执行一次
-*&#x2F;5 * * * * &#x2F;opt&#x2F; 每五分钟执行一次
-0 *&#x2F;1 * * * &#x2F;opt&#x2F; 每小时执行一次
-30 1 * * * &#x2F;opt&#x2F; 每天1:30执行一次
-0 23-7&#x2F;2，8 * * * 晚上11点到早上8点之间每两个小时和早上八点
+*/1 * * * * /opt/ 每一分钟执行一次
+*/5 * * * * /opt/ 每五分钟执行一次
+0 */1 * * * /opt/ 每小时执行一次
+30 1 * * * /opt/ 每天1:30执行一次
+0 23-7/2，8 * * * 晚上11点到早上8点之间每两个小时和早上八点
 0 11 4 * 1-3 每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点
 22 4 * * 0 每星期（周日凌晨4：22）执行
 42 4 1 * * 每月（1号凌晨4：42）去执行

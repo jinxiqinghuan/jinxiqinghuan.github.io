@@ -30,7 +30,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -791,7 +793,7 @@ cv<span class="token punctuation">.</span>createTrackbar<span class="token punct
     <span class="token keyword">for</span> cnt <span class="token keyword">in</span> contours<span class="token punctuation">:</span>
         area <span class="token operator">=</span> cv<span class="token punctuation">.</span>contourArea<span class="token punctuation">(</span>cnt<span class="token punctuation">)</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span>area<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> area <span class="token operator">></span> <span class="token number">500</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> area <span class="token operator">&gt;</span> <span class="token number">500</span><span class="token punctuation">:</span>
             cv<span class="token punctuation">.</span>drawContours<span class="token punctuation">(</span>imgContour<span class="token punctuation">,</span> cnt<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
             peri <span class="token operator">=</span> cv<span class="token punctuation">.</span>arcLength<span class="token punctuation">(</span>cnt<span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">)</span>
             <span class="token keyword">print</span><span class="token punctuation">(</span>peri<span class="token punctuation">)</span>
@@ -871,12 +873,12 @@ cap<span class="token punctuation">.</span><span class="token builtin">set</span
     contours<span class="token punctuation">,</span>hierarchy <span class="token operator">=</span> cv<span class="token punctuation">.</span>findContours<span class="token punctuation">(</span>img<span class="token punctuation">,</span>cv<span class="token punctuation">.</span>RETR_EXTERNAL<span class="token punctuation">,</span>cv<span class="token punctuation">.</span>CHAIN_APPROX_NONE<span class="token punctuation">)</span>
     <span class="token keyword">for</span> cnt <span class="token keyword">in</span> contours<span class="token punctuation">:</span>
         area <span class="token operator">=</span> cv<span class="token punctuation">.</span>contourArea<span class="token punctuation">(</span>cnt<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> area <span class="token operator">></span> <span class="token number">3000</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> area <span class="token operator">&gt;</span> <span class="token number">3000</span><span class="token punctuation">:</span>
             <span class="token comment">#cv.drawContours(imgContour, cnt, -1, (255, 0, 0), 3)</span>
             peri <span class="token operator">=</span> cv<span class="token punctuation">.</span>arcLength<span class="token punctuation">(</span>cnt<span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">)</span>
             <span class="token comment">#print(peri)</span>
             approx <span class="token operator">=</span> cv<span class="token punctuation">.</span>approxPolyDP<span class="token punctuation">(</span>cnt<span class="token punctuation">,</span><span class="token number">0.02</span> <span class="token operator">*</span> peri<span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-            <span class="token keyword">if</span> area <span class="token operator">></span> maxArea <span class="token keyword">and</span> <span class="token builtin">len</span><span class="token punctuation">(</span>approx<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> area <span class="token operator">&gt;</span> maxArea <span class="token keyword">and</span> <span class="token builtin">len</span><span class="token punctuation">(</span>approx<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
                 biggest <span class="token operator">=</span> approx
                 maxArea <span class="token operator">=</span> area
     cv<span class="token punctuation">.</span>drawContours<span class="token punctuation">(</span>imgContour<span class="token punctuation">,</span> biggest<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>

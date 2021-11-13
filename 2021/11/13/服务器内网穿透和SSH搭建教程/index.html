@@ -31,7 +31,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -481,11 +483,11 @@
 <p>配置文件：vim <strong>frps.ini</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[common]
 #服务器开放的端口
-bind_port &#x3D; 7000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+bind_port = 7000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>在阿里云服务器后台开启6000和7000端口</p>
 <p>启动服务;</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">nohup frp&#x2F;frps -c frp&#x2F;frps.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">nohup frp/frps -c frp/frps.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -494,14 +496,14 @@ bind_port &#x3D; 7000<span aria-hidden="true" class="line-numbers-rows"><span></
 <p>和服务器端配置相似，不过配置的不是server文件，而是client文件</p>
 <p>配置frpc.ini文件</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[common]
-server_addr &#x3D; 你自己服务器端ip（公网ip）
-server_port &#x3D;  7000 #对应服务器配置中的端口
+server_addr = 你自己服务器端ip（公网ip）
+server_port =  7000 #对应服务器配置中的端口
   
 [ssh]
-type &#x3D; tcp
-local_ip &#x3D; 自己电脑的ip
-local_port &#x3D; 3389
-remote_port &#x3D; 6000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+type = tcp
+local_ip = 自己电脑的ip
+local_port = 3389
+remote_port = 6000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果是Windows系统，还需要添加端口出站规则：将端口<strong>3389</strong>添加到出站规则中。</p>
 <p>而后在cmd中运行</p>
@@ -509,18 +511,18 @@ remote_port &#x3D; 6000<span aria-hidden="true" class="line-numbers-rows"><span>
 
 <p>如果需要配置多个客服端，映射到同一个公网IP，则需要：特殊配置，ssh名称和端口均不能</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">内网机器1：
-[ssh]                      &lt;&#x3D;&#x3D;不同点
-type &#x3D; tcp 
-local_ip &#x3D; 内网机器1的ip地址
-local_port &#x3D; 3389
-remote_port &#x3D; 6000         &lt;&#x3D;&#x3D;不同点
+[ssh]                      &lt;==不同点
+type = tcp 
+local_ip = 内网机器1的ip地址
+local_port = 3389
+remote_port = 6000         &lt;==不同点
 
 内网机器2：
-[ssh1]                     &lt;&#x3D;&#x3D;不同点
-type &#x3D; tcp 
-local_ip &#x3D; 内网机器2的ip地址
-local_port &#x3D; 3389
-remote_port &#x3D; 6001         &lt;&#x3D;&#x3D;不同点<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[ssh1]                     &lt;==不同点
+type = tcp 
+local_ip = 内网机器2的ip地址
+local_port = 3389
+remote_port = 6001         &lt;==不同点<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>防止每次都开机都需要运行，用winsw将frp注册为系统服务。</p>
 <p>以上参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaofanke/p/10428409.html">利用阿里云搭建frp实现外网远程桌面链接内网电脑 - 萧凡客 - 博客园 (cnblogs.com)</a></p>
@@ -838,9 +840,10 @@ remote_port &#x3D; 6001         &lt;&#x3D;&#x3D;不同点<span aria-hidden="true
                     <div class="summary block-with-text">
                         
                             1.pip下载慢、经常出错可以切换下载源为国内源，比如:
-pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pandas
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
 
-，这样就会从清华镜像安装
+，这样就会从清华镜像安装pandas库。
+永久修改方式
                         
                     </div>
                     <div class="publish-info">

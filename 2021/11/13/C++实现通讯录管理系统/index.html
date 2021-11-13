@@ -34,7 +34,9 @@ C++通讯录管理系统源代码#include&amp;lt;iostream&amp;gt;
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -475,273 +477,273 @@ using namespace std;
 #define MAX 1000
 
 struct Person
-&#123;
+{
     string m_Name;
     int m_Sex;
     int m_Age;
     string m_Phone;
     string m_Addr;
-&#125;;
+};
 
 struct Addressbooks
-&#123;
+{
     struct Person personArray[MAX];
     int m_Size;
-&#125;;
+};
 
 
-&#x2F;&#x2F;显示菜单
+//显示菜单
 void showMenu()
-&#123;
-    cout &lt;&lt; &quot;*************************&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  1.添加联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  2.显示联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  3.删除联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  4.查找联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  5.修改联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  6.清空联系人  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  7.打开python  *****&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*****  0.退出&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;*************************&quot; &lt;&lt; endl;
+{
+    cout &lt;&lt; "*************************" &lt;&lt; endl;
+    cout &lt;&lt; "*****  1.添加联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  2.显示联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  3.删除联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  4.查找联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  5.修改联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  6.清空联系人  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  7.打开python  *****" &lt;&lt; endl;
+    cout &lt;&lt; "*****  0.退出" &lt;&lt; endl;
+    cout &lt;&lt; "*************************" &lt;&lt; endl;
 
-&#125;
+}
 
 
-&#x2F;&#x2F;添加过程
+//添加过程
 void add_person(Addressbooks * abs)
-&#123;
+{
     string name;
-    cout &lt;&lt; &quot;请输入姓名&quot; &lt;&lt; endl;
+    cout &lt;&lt; "请输入姓名" &lt;&lt; endl;
     cin &gt;&gt; name;
-    abs-&gt;personArray[abs-&gt;m_Size].m_Name &#x3D; name;
+    abs-&gt;personArray[abs-&gt;m_Size].m_Name = name;
 
-    cout &lt;&lt; &quot;请输入性别&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;1 --- 男&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;2 --- 女&quot; &lt;&lt; endl;
-    int sex &#x3D; 0;
+    cout &lt;&lt; "请输入性别" &lt;&lt; endl;
+    cout &lt;&lt; "1 --- 男" &lt;&lt; endl;
+    cout &lt;&lt; "2 --- 女" &lt;&lt; endl;
+    int sex = 0;
     while (true)
-    &#123;
+    {
         cin &gt;&gt; sex;
-        if (sex &#x3D;&#x3D; 1 || sex &#x3D;&#x3D; 2)
-        &#123;
-            abs-&gt;personArray[abs-&gt;m_Size].m_Sex &#x3D; sex;
+        if (sex == 1 || sex == 2)
+        {
+            abs-&gt;personArray[abs-&gt;m_Size].m_Sex = sex;
             break;
-        &#125;
-        cout &lt;&lt; &quot;输入有误，请重新输入&quot; &lt;&lt; endl;
-    &#125;
+        }
+        cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+    }
 
 
-    cout &lt;&lt; &quot;请输入年龄： &quot; &lt;&lt; endl;
-    int age &#x3D; 0;
+    cout &lt;&lt; "请输入年龄： " &lt;&lt; endl;
+    int age = 0;
     cin &gt;&gt; age;
-    abs-&gt;personArray[abs-&gt;m_Size].m_Age &#x3D; age;
+    abs-&gt;personArray[abs-&gt;m_Size].m_Age = age;
 
-    cout &lt;&lt; &quot;请输入联系电话： &quot; &lt;&lt; endl;
+    cout &lt;&lt; "请输入联系电话： " &lt;&lt; endl;
     string phone;
     cin &gt;&gt; phone;
-    abs-&gt;personArray[abs-&gt;m_Size].m_Phone &#x3D; phone;
+    abs-&gt;personArray[abs-&gt;m_Size].m_Phone = phone;
 
-    cout &lt;&lt; &quot;请输入家庭住址： &quot; &lt;&lt; endl;
+    cout &lt;&lt; "请输入家庭住址： " &lt;&lt; endl;
     string address;
     cin &gt;&gt; address;
-    abs-&gt;personArray[abs-&gt;m_Size].m_Addr &#x3D; address;
+    abs-&gt;personArray[abs-&gt;m_Size].m_Addr = address;
 
-    &#x2F;&#x2F;更新通信录人数
+    //更新通信录人数
     abs-&gt;m_Size++;
-    cout &lt;&lt; &quot;添加成功&quot; &lt;&lt; endl;
-&#125;
+    cout &lt;&lt; "添加成功" &lt;&lt; endl;
+}
 
-&#x2F;&#x2F;1.添加联系人
+//1.添加联系人
 void addPreson(Addressbooks* abs)
-&#123;
+{
     
-    &#x2F;&#x2F;判断通信录是否已满，如果满了就不再添加
-    if (abs-&gt;m_Size &#x3D;&#x3D; MAX)
-    &#123;
-        cout &lt;&lt; &quot;通信录已满，无法添加！&quot; &lt;&lt; endl;
+    //判断通信录是否已满，如果满了就不再添加
+    if (abs-&gt;m_Size == MAX)
+    {
+        cout &lt;&lt; "通信录已满，无法添加！" &lt;&lt; endl;
         return;
-    &#125;
+    }
     else
-    &#123;
+    {
         add_person(abs);
-        system(&quot;pause&quot;);
-        system(&quot;cls&quot;);
-    &#125;
-&#125;
+        system("pause");
+        system("cls");
+    }
+}
 
 
-&#x2F;&#x2F;2.显示所有的联系人
+//2.显示所有的联系人
 void showPerson(Addressbooks* abs)
-&#123; 
-&#x2F;&#x2F;判断通信录中人数是否为0，如果为0，提示记录为空
-&#x2F;&#x2F;如果不为0，显示记录的联系人信息
-if (abs-&gt;m_Size &#x3D;&#x3D; 0)
-&#123;
-    cout &lt;&lt; &quot;当前记录为空&quot; &lt;&lt; endl;
-&#125;
+{ 
+//判断通信录中人数是否为0，如果为0，提示记录为空
+//如果不为0，显示记录的联系人信息
+if (abs-&gt;m_Size == 0)
+{
+    cout &lt;&lt; "当前记录为空" &lt;&lt; endl;
+}
 else
-&#123;
-    for (int i &#x3D; 0; i &lt; abs-&gt;m_Size; i++)
-    &#123;
-        cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;personArray[i].m_Name &lt;&lt; endl;
-        cout &lt;&lt; &quot;性别：&quot; &lt;&lt; (abs-&gt;personArray[i].m_Sex &#x3D;&#x3D; 1 ? &quot;男&quot;:&quot;女&quot;)&lt;&lt; endl;
-        cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;personArray[i].m_Age &lt;&lt; endl;
-        cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;personArray[i].m_Phone&lt;&lt; endl;
-        cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;personArray[i].m_Addr &lt;&lt; endl;
+{
+    for (int i = 0; i &lt; abs-&gt;m_Size; i++)
+    {
+        cout &lt;&lt; "姓名：" &lt;&lt; abs-&gt;personArray[i].m_Name &lt;&lt; endl;
+        cout &lt;&lt; "性别：" &lt;&lt; (abs-&gt;personArray[i].m_Sex == 1 ? "男":"女")&lt;&lt; endl;
+        cout &lt;&lt; "年龄：" &lt;&lt; abs-&gt;personArray[i].m_Age &lt;&lt; endl;
+        cout &lt;&lt; "电话：" &lt;&lt; abs-&gt;personArray[i].m_Phone&lt;&lt; endl;
+        cout &lt;&lt; "地址：" &lt;&lt; abs-&gt;personArray[i].m_Addr &lt;&lt; endl;
         cout &lt;&lt; endl;
-    &#125;
-&#125;
-    system(&quot;pause&quot;);
-    system(&quot;cls&quot;);
-&#125;
+    }
+}
+    system("pause");
+    system("cls");
+}
 
 
-&#x2F;&#x2F;检测联系人是否存在，如果存在，返回联系人所在数组中的具体位置，不存在返回-1
-&#x2F;&#x2F;参数一 通信录  参数二 对比姓名
+//检测联系人是否存在，如果存在，返回联系人所在数组中的具体位置，不存在返回-1
+//参数一 通信录  参数二 对比姓名
 int isExist(Addressbooks * abs, string name)
-&#123;
-    for (int i &#x3D; 0; i &lt; abs-&gt;m_Size; i++)
-    &#123;
-        if (abs-&gt;personArray[i].m_Name &#x3D;&#x3D; name)
-        &#123;
+{
+    for (int i = 0; i &lt; abs-&gt;m_Size; i++)
+    {
+        if (abs-&gt;personArray[i].m_Name == name)
+        {
             return i;
-        &#125;
-    &#125;
-    return -1; &#x2F;&#x2F;如果遍历结束都没有找到,返回-1
-&#125;
+        }
+    }
+    return -1; //如果遍历结束都没有找到,返回-1
+}
 
 
 
-&#x2F;&#x2F;3.删除指定的联系人
+//3.删除指定的联系人
 void deletePerson(Addressbooks* abs)
-&#123;
-    cout &lt;&lt; &quot;请输入您要删除的联系人&quot; &lt;&lt; endl;
+{
+    cout &lt;&lt; "请输入您要删除的联系人" &lt;&lt; endl;
     string name;
     cin &gt;&gt; name;
 
-    &#x2F;&#x2F;ret &#x3D;&#x3D; -1 未查到
-    &#x2F;&#x2F;ret !&#x3D; -1 查到了
-    int ret &#x3D; isExist(abs, name);
-    if (ret !&#x3D; -1)
-    &#123;
-        for (int i &#x3D; ret; i &lt; abs-&gt;m_Size; i++)
-        &#123;
-            &#x2F;&#x2F;数据前移
-            abs-&gt;personArray[i] &#x3D; abs-&gt;personArray[i + 1];
-        &#125;
-        cout &lt;&lt; &quot;删除成功！&quot; &lt;&lt; endl;
-    &#125;
+    //ret == -1 未查到
+    //ret != -1 查到了
+    int ret = isExist(abs, name);
+    if (ret != -1)
+    {
+        for (int i = ret; i &lt; abs-&gt;m_Size; i++)
+        {
+            //数据前移
+            abs-&gt;personArray[i] = abs-&gt;personArray[i + 1];
+        }
+        cout &lt;&lt; "删除成功！" &lt;&lt; endl;
+    }
     else
-    &#123;
-        cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;
-    &#125;
-    system(&quot;pause&quot;);
-    system(&quot;cls&quot;);
-&#125;
+    {
+        cout &lt;&lt; "查无此人" &lt;&lt; endl;
+    }
+    system("pause");
+    system("cls");
+}
 
 
-&#x2F;&#x2F;4.查找指定的联系人信息
+//4.查找指定的联系人信息
 void findPerson(Addressbooks* abs)
-&#123;
-    cout &lt;&lt; &quot;请输入您要查找的联系人&quot; &lt;&lt; endl;
+{
+    cout &lt;&lt; "请输入您要查找的联系人" &lt;&lt; endl;
     string name;
     cin &gt;&gt; name;
 
-    &#x2F;&#x2F;判断指定的联系人是否存在通信录中
-    int ret &#x3D; isExist(abs, name);
-    if (ret !&#x3D; -1)
-    &#123;
-        cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;personArray[ret].m_Name &lt;&lt; endl;
-        cout &lt;&lt; &quot;性别：&quot; &lt;&lt; (abs-&gt;personArray[ret].m_Sex &#x3D;&#x3D; 1 ? &quot;男&quot; : &quot;女&quot;) &lt;&lt; endl;
-        cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;personArray[ret].m_Age &lt;&lt; endl;
-        cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;personArray[ret].m_Phone &lt;&lt; endl;
-        cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;personArray[ret].m_Addr &lt;&lt; endl;
+    //判断指定的联系人是否存在通信录中
+    int ret = isExist(abs, name);
+    if (ret != -1)
+    {
+        cout &lt;&lt; "姓名：" &lt;&lt; abs-&gt;personArray[ret].m_Name &lt;&lt; endl;
+        cout &lt;&lt; "性别：" &lt;&lt; (abs-&gt;personArray[ret].m_Sex == 1 ? "男" : "女") &lt;&lt; endl;
+        cout &lt;&lt; "年龄：" &lt;&lt; abs-&gt;personArray[ret].m_Age &lt;&lt; endl;
+        cout &lt;&lt; "电话：" &lt;&lt; abs-&gt;personArray[ret].m_Phone &lt;&lt; endl;
+        cout &lt;&lt; "地址：" &lt;&lt; abs-&gt;personArray[ret].m_Addr &lt;&lt; endl;
         cout &lt;&lt; endl;
-    &#125;
+    }
     else
-    &#123;
-        cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;
-    &#125;
-    system(&quot;pause&quot;);
-    system(&quot;cls&quot;);
-&#125;
+    {
+        cout &lt;&lt; "查无此人" &lt;&lt; endl;
+    }
+    system("pause");
+    system("cls");
+}
 
 
-&#x2F;&#x2F;5.修改指定联系人
+//5.修改指定联系人
 void modifyPerson(Addressbooks * abs)
-&#123;
-    cout &lt;&lt; &quot;请输入您要修改的联系人&quot; &lt;&lt; endl;
+{
+    cout &lt;&lt; "请输入您要修改的联系人" &lt;&lt; endl;
     string name;
     cin &gt;&gt; name;
 
-    int ret &#x3D; isExist(abs, name);
+    int ret = isExist(abs, name);
 
-        if (ret !&#x3D; -1)
-        &#123;
-            abs-&gt;m_Size &#x3D; ret;
+        if (ret != -1)
+        {
+            abs-&gt;m_Size = ret;
             add_person(abs);
-            cout &lt;&lt; &quot;修改成功！&quot; &lt;&lt; endl;
-        &#125;
+            cout &lt;&lt; "修改成功！" &lt;&lt; endl;
+        }
         else
-        &#123;
-            cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;
-        &#125;
-        system(&quot;pause&quot;);
-        system(&quot;cls&quot;);
+        {
+            cout &lt;&lt; "查无此人" &lt;&lt; endl;
+        }
+        system("pause");
+        system("cls");
 
-&#125;
+}
 
 
-&#x2F;&#x2F;6.清空联系人
+//6.清空联系人
 void cleanPerson(Addressbooks* abs)
-&#123;
-    cout &lt;&lt; &quot;该操作会删除全部联系人，是否确认清空？（y&#x2F;n）&quot; &lt;&lt; endl;
+{
+    cout &lt;&lt; "该操作会删除全部联系人，是否确认清空？（y/n）" &lt;&lt; endl;
     while (true)
-    &#123;
+    {
         int choose;
         cin &gt;&gt; choose;
-        if (choose &#x3D;&#x3D; 1 || choose &#x3D;&#x3D; 2)
-        &#123;
-            if (choose &#x3D;&#x3D; 1)
-            &#123;
-                abs-&gt;m_Size &#x3D; 0;
-                cout &lt;&lt; &quot;通讯录已清空！&quot; &lt;&lt; endl;
-            &#125;
+        if (choose == 1 || choose == 2)
+        {
+            if (choose == 1)
+            {
+                abs-&gt;m_Size = 0;
+                cout &lt;&lt; "通讯录已清空！" &lt;&lt; endl;
+            }
             else
-            &#123;
-                cout &lt;&lt; &quot;已取消删除！&quot; &lt;&lt; endl;
-            &#125;
+            {
+                cout &lt;&lt; "已取消删除！" &lt;&lt; endl;
+            }
             break;
-        &#125;
+        }
         else
-        &#123;
-            cout &lt;&lt; &quot;输入有误，请重新输入&quot; &lt;&lt; endl;
-        &#125;
+        {
+            cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+        }
 
-    &#125;
+    }
 
-    system(&quot;pause&quot;);
-    system(&quot;cls&quot;);
-&#125;
+    system("pause");
+    system("cls");
+}
 
 
 
 
 int main()
-&#123;
-    &#x2F;&#x2F;创建通信录结构体变量
+{
+    //创建通信录结构体变量
     Addressbooks abs;
-    &#x2F;&#x2F;初始化通信录中当前人员个数
-    abs.m_Size &#x3D; 0;
-    int select &#x3D; 0; &#x2F;&#x2F;创建用户选择输入变量
+    //初始化通信录中当前人员个数
+    abs.m_Size = 0;
+    int select = 0; //创建用户选择输入变量
     while (true)
-    &#123;
+    {
         showMenu();
         cin &gt;&gt; select;
         switch (select)
-        &#123;
+        {
         case 1:
-            addPreson(&amp;abs);  &#x2F;&#x2F;利用地址传递，可以修改实参
+            addPreson(&amp;abs);  //利用地址传递，可以修改实参
             break;
         case 2:
             showPerson(&amp;abs);
@@ -759,21 +761,21 @@ int main()
             cleanPerson(&amp;abs);
             break;
         case 7:
-            system(&quot;python&quot;);
+            system("python");
         case 0:
-            cout &lt;&lt; &quot;欢迎下次使用&quot; &lt;&lt; endl;
-            system(&quot;pause&quot;);
+            cout &lt;&lt; "欢迎下次使用" &lt;&lt; endl;
+            system("pause");
             return 0;
             break;
         default:
             break;
-        &#125;
-    &#125;
+        }
+    }
 
 
-    system(&quot;pause&quot;);
+    system("pause");
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 

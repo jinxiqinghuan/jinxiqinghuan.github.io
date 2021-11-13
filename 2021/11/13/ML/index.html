@@ -37,7 +37,9 @@ import numpy as np
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -532,13 +534,13 @@ import numpy as np
     initial_b <span class="token operator">=</span> <span class="token number">4.447826696393031</span> <span class="token comment"># initial y-intercept guess</span>
     initial_w <span class="token operator">=</span> <span class="token number">1.3981298519520384</span> <span class="token comment"># initial slope guess</span>
     num_iterations <span class="token operator">=</span> <span class="token number">100000</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Starting gradient descent at b = &#123;0&#125;, w = &#123;1&#125;, error = &#123;2&#125;"</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Starting gradient descent at b = {0}, w = {1}, error = {2}"</span>
           <span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>initial_b<span class="token punctuation">,</span> initial_w<span class="token punctuation">,</span>
                   compute_error_for_line_given_points<span class="token punctuation">(</span>initial_b<span class="token punctuation">,</span> initial_w<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">)</span>
           <span class="token punctuation">)</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Running..."</span><span class="token punctuation">)</span>
     <span class="token punctuation">[</span>b<span class="token punctuation">,</span> w<span class="token punctuation">]</span> <span class="token operator">=</span> gradient_descent_runner<span class="token punctuation">(</span>points<span class="token punctuation">,</span> initial_b<span class="token punctuation">,</span> initial_w<span class="token punctuation">,</span> learning_rate<span class="token punctuation">,</span> num_iterations<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"After &#123;0&#125; iterations b = &#123;1&#125;, w = &#123;2&#125;, error = &#123;3&#125;"</span><span class="token punctuation">.</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"After {0} iterations b = {1}, w = {2}, error = {3}"</span><span class="token punctuation">.</span>
           <span class="token builtin">format</span><span class="token punctuation">(</span>num_iterations<span class="token punctuation">,</span> b<span class="token punctuation">,</span> w<span class="token punctuation">,</span>
                  compute_error_for_line_given_points<span class="token punctuation">(</span>b<span class="token punctuation">,</span> w<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">)</span>
           <span class="token punctuation">)</span>

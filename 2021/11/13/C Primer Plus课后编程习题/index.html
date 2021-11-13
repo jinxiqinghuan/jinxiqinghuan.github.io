@@ -9,11 +9,12 @@
 
 
 第二章1.
-&amp;#x2F;&amp;#x2F;打印姓名
+//打印姓名
 #include&amp;lt;stdio.h&amp;gt;
 int main()
-&amp;#123;
-    printf(&amp;quot;Gustav ">
+{
+    printf(&#34;Gustav Mahler\n&#34;);
+    prin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -38,7 +39,9 @@ int main()
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -474,201 +477,201 @@ int main()
 <span id="more"></span>
 
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>1.</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;打印姓名
+<pre class="line-numbers language-none"><code class="language-none">//打印姓名
 #include&lt;stdio.h&gt;
 int main()
-&#123;
-    printf(&quot;Gustav Mahler\n&quot;);
-    printf(&quot;Gustav\n&quot;);
-    printf(&quot;Mahler\n&quot;);
-    printf(&quot;Gustav Mahler\n&quot;);
+{
+    printf("Gustav Mahler\n");
+    printf("Gustav\n");
+    printf("Mahler\n");
+    printf("Gustav Mahler\n");
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2.</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;打印姓名和地址
+<pre class="line-numbers language-none"><code class="language-none">//打印姓名和地址
 #include&lt;stdio.h&gt;
 int main()
-&#123;
-    printf(&quot;Jack Ma\n&quot;);
-    printf(&quot;CHINA\n&quot;);
+{
+    printf("Jack Ma\n");
+    printf("CHINA\n");
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>3.</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;输入年龄返回天数
+<pre class="line-numbers language-none"><code class="language-none">//输入年龄返回天数
 #include&lt;stdio.h&gt;
 int main()
-&#123;
+{
     int i_age,i_days;
-    printf(&quot;please type you age：\n&quot;);
-    scanf(&quot;%d&quot;,&amp;i_age);
-    i_days &#x3D; 365 * i_age;
-    printf(&quot;convert to days is：%d&quot;,i_days);
+    printf("please type you age：\n");
+    scanf("%d",&amp;i_age);
+    i_days = 365 * i_age;
+    printf("convert to days is：%d",i_days);
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>4.</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;调用函数进行打印
+<pre class="line-numbers language-none"><code class="language-none">//调用函数进行打印
 #include&lt;stdio.h&gt;
 
 void jolly()
-&#123;   int i;
-    for(i&#x3D;0;i&lt;3;i++)
-        printf(&quot;For he is a jolly good fellow!\n&quot;);
-&#125;
+{   int i;
+    for(i=0;i&lt;3;i++)
+        printf("For he is a jolly good fellow!\n");
+}
 
 void deny()
-&#123;
-    printf(&quot;Which nobody can deny!&quot;);
-&#125;
+{
+    printf("Which nobody can deny!");
+}
 
 int main()
-&#123;
+{
     jolly();
     deny();
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>5.（<strong>两个子函数的内容不显示，已解决</strong>）【调用函数格式错误，前边不需要加void】</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdio.h&gt;
 
 void br()
-&#123;
-    printf(&quot;Brazil,Russia\n&quot;);
-&#125;
+{
+    printf("Brazil,Russia\n");
+}
 
 void ic()
-&#123;
-    printf(&quot;India,China\n&quot;);
-&#125;
+{
+    printf("India,China\n");
+}
 
 int main()
-&#123;
-    printf(&quot;Brazil,Russia,India,China&quot;);
+{
+    printf("Brazil,Russia,India,China");
     void br();
     void ic();
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>6.（<strong>待排查，使用pow(toes,2)计算10的平方，输出为99；如果直接pow(10,2)正常，直接toes*toes也正常</strong>）</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdio.h&gt;
 #include&lt;math.h&gt;
 
 int main()
-&#123;
-    int toes &#x3D; 10;
+{
+    int toes = 10;
     int i_twice,i_square;
-    i_twice &#x3D; toes * 2;
-    i_square &#x3D; pow(toes,2);
-    printf(&quot;The twice of toes is:%d\n&quot;,i_twice);
-    printf(&quot;The square of toes is:%d\n&quot;,i_square);
+    i_twice = toes * 2;
+    i_square = pow(toes,2);
+    printf("The twice of toes is:%d\n",i_twice);
+    printf("The square of toes is:%d\n",i_square);
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>7.</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdio.h&gt;
 
 void joker()
-&#123;
-    printf(&quot;Smile!&quot;);
-&#125;
+{
+    printf("Smile!");
+}
 
-&#x2F;&#x2F;换行
+//换行
 void nn()
-&#123;
-    printf(&quot;\n&quot;);
-&#125;
+{
+    printf("\n");
+}
 
 int main()
-&#123;
+{
     joker();joker();joker();nn();
     joker();joker();nn();
     joker();nn();
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>8.</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdio.h&gt;
 
 void one_three()
-&#123;
-    printf(&quot;one\n&quot;);
+{
+    printf("one\n");
     two();
-    printf(&quot;three&quot;);
+    printf("three");
 
-&#125;
+}
 
 void two()
-&#123;
-    printf(&quot;two\n&quot;);
-&#125;
+{
+    printf("two\n");
+}
 
 int main()
-&#123;
-    printf(&quot;starting now:\n&quot;);
+{
+    printf("starting now:\n");
     one_three();
     return 0;
 
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>1.</p>
 <p>a).整型的上溢</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdio.h&gt;
 int main()
-&#123;
-    int big &#x3D; 4294967296;
+{
+    int big = 4294967296;
     int toobig;
-    toobig &#x3D; big + 1;
-    printf(&quot;The value of big is %d\nThe value of toobig is %d\n&quot;,big,toobig);
+    toobig = big + 1;
+    printf("The value of big is %d\nThe value of toobig is %d\n",big,toobig);
     return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>输出为：</p>
 <p>The value of big is 0<br>The value of toobig is 1</p>
 <p>b).浮点数上溢</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> toobig <span class="token operator">=</span> <span class="token number">3.4E38</span> <span class="token operator">*</span> <span class="token number">100.0f</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%e\n"</span><span class="token punctuation">,</span>toobig<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>输出：</p>
 <p>1.#INF00e+000</p>
 <p>c).浮点数下溢</p>
-<p>（按照<C Primer Plus>的描述来编写程序，结果输出未发生下溢，可能是64位机的缘故。但如果增多小数位数，精度确实会发生改变）</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<p>（按照<c primer="" plus="">的描述来编写程序，结果输出未发生下溢，可能是64位机的缘故。但如果增多小数位数，精度确实会发生改变）</c></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> toobig<span class="token punctuation">;</span>
     toobig <span class="token operator">=</span>  <span class="token number">0.123456789E-10</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%e\n"</span><span class="token punctuation">,</span>toobig<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>输出为：1.234568e-012</p>
 <p>2.</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">int</span> i_number<span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please type a number&lt;0~127>\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please type a number&lt;0~127&gt;\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>i_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The ASCII of the number is %c"</span><span class="token punctuation">,</span>i_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>3.</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\aStartled by the sudden sound, Sally shouted,\n'By the Great Pumpkin, what was that!'"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>4.<strong>（待排查，输出16进制计数法时，输出为0）</strong></p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> f_number<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Enter a floating-point value:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>f_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -676,12 +679,12 @@ int main()
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"expoential notations: %e\n"</span><span class="token punctuation">,</span>f_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"p notation: %X"</span><span class="token punctuation">,</span>f_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>5.（<strong>待排查，数值较大，所以使用了long long int，但是输出还是不正常</strong>）</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">int</span> age<span class="token punctuation">;</span>
     <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token keyword">int</span> second<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please inter your age:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -689,12 +692,12 @@ int main()
     second <span class="token operator">=</span> age <span class="token operator">*</span> <span class="token number">3.156</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The second of your age is: %d"</span><span class="token punctuation">,</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>6.（出错，等待解决，了解当数值很大或者很小时，应该真么定义）</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> quart<span class="token punctuation">,</span> weight<span class="token punctuation">;</span>
     <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token keyword">int</span> number<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please Enter a number of the water:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -703,24 +706,24 @@ int main()
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The weight of water is %f g"</span><span class="token punctuation">,</span> weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
     number <span class="token operator">=</span> weight <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">^</span> <span class="token operator">-</span><span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The number of the water is %d"</span><span class="token punctuation">,</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>7.(该程序在visual studio 2019中运行时报错，而在codeblocks中正常)</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> num1<span class="token punctuation">,</span> num2<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入你的身高（英寸）"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
     num2 <span class="token operator">=</span> num1 <span class="token operator">*</span> <span class="token number">2.54</span> <span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"你的身高是%f cm"</span><span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>8.</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">float</span> cup<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入杯数:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>cup<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -730,12 +733,12 @@ int main()
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"茶勺数：%f\n"</span><span class="token punctuation">,</span>cup <span class="token operator">*</span> <span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>1.</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">char</span> first_name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span>last_name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入你的名字："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>first_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -743,7 +746,7 @@ int main()
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>last_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"I get is，your name is :%s %s"</span><span class="token punctuation">,</span>first_name<span class="token punctuation">,</span>last_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2.</p>
 <p>3.</p>

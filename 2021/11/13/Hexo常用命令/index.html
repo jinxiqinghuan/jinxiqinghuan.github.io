@@ -10,7 +10,7 @@ hexonpm install hexo -g #安装
 npm update hexo -g #升级  
 hexo init #初始化
 
-简写hexo n &amp;quot;我的博客&amp;quot; ">
+简写hexo n &#34;我的博客&#34; == hexo ne">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -35,7 +35,9 @@ hexo init #初始化
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -476,7 +478,7 @@ hexo init #初始化
 npm update hexo -g #升级  
 hexo init #初始化<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署</p>
+<h2 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h2><p><code>hexo n "我的博客"</code> == <code>hexo new "我的博客"</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署</p>
 <span id="more"></span>
 
 <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
@@ -485,15 +487,15 @@ hexo init #初始化<span aria-hidden="true" class="line-numbers-rows"><span></s
 <h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><blockquote>
 <p>两个命令的作用是相同的<br><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">hexo deploy -g&#96;
-&#96;hexo server -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">hexo deploy -g`
+`hexo server -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><pre class="line-numbers language-none"><code class="language-none">hexo publish [layout] <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h2><p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo new [layout] &#96;
-&#96;hexo new photo &quot;My Gallery&quot;&#96;
-&#96;hexo new &quot;Hello World&quot; --lang tw<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h2><p><code>hexo new "postName"</code> #新建文章<br><code>hexo new page "pageName"</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo new [layout] `
+`hexo new photo "My Gallery"`
+`hexo new "Hello World" --lang tw<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -524,7 +526,7 @@ tags: [Hexo]
 keywords: Hexo, Blog
 description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="模版（Scaffold）"><a href="#模版（Scaffold）" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h2><pre class="line-numbers language-none"><code class="language-none">hexo new photo &quot;My Gallery&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="模版（Scaffold）"><a href="#模版（Scaffold）" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h2><pre class="line-numbers language-none"><code class="language-none">hexo new photo "My Gallery"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -548,8 +550,8 @@ description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞�
 </tbody></table>
 <h2 id="设置文章摘要"><a href="#设置文章摘要" class="headerlink" title="设置文章摘要"></a>设置文章摘要</h2><pre class="line-numbers language-none"><code class="language-none">以上是文章摘要 &lt;!--more--&gt; 以下是余下全文 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><pre class="line-numbers language-none"><code class="language-none">hexo new page &#96;
-&#96;hexo new post <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><pre class="line-numbers language-none"><code class="language-none">hexo new page `
+`hexo new post <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -583,9 +585,9 @@ description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞�
 <td>建立的日期（去掉开头的零）</td>
 </tr>
 </tbody></table>
-<h3 id="推送到服务器上"><a href="#推送到服务器上" class="headerlink" title="推送到服务器上"></a>推送到服务器上</h3><pre class="line-numbers language-none"><code class="language-none">hexo n&#96; #写文章
-&#96;hexo g&#96; #生成
-&#96;hexo d&#96; #部署 #可与&#96;hexo g&#96;合并为 &#96;hexo d -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="推送到服务器上"><a href="#推送到服务器上" class="headerlink" title="推送到服务器上"></a>推送到服务器上</h3><pre class="line-numbers language-none"><code class="language-none">hexo n` #写文章
+`hexo g` #生成
+`hexo d` #部署 #可与`hexo g`合并为 `hexo d -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><h3 id="1-找不到git部署"><a href="#1-找不到git部署" class="headerlink" title="1.找不到git部署"></a>1.找不到git部署</h3><pre class="line-numbers language-none"><code class="language-none">ERROR Deployer not found: git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -594,10 +596,10 @@ description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞�
 
 <h3 id="3-部署类型设置git"><a href="#3-部署类型设置git" class="headerlink" title="3.部署类型设置git"></a>3.部署类型设置git</h3><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
 <pre class="line-numbers language-none"><code class="language-none"># Deployment
-## Docs: http:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html
+## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@***.github.com:***&#x2F;***.github.io.git
+  repository: git@***.github.com:***/***.github.io.git
   branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-xcodebuild"><a href="#4-xcodebuild" class="headerlink" title="4. xcodebuild"></a>4. xcodebuild</h3><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance</p>
@@ -606,42 +608,42 @@ deploy:
 <h3 id="5-RSS不显示"><a href="#5-RSS不显示" class="headerlink" title="5. RSS不显示"></a>5. RSS不显示</h3><h4 id="安装RSS插件"><a href="#安装RSS插件" class="headerlink" title="安装RSS插件"></a>安装RSS插件</h4><pre class="line-numbers language-none"><code class="language-none">npm install hexo-generator-feed --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="开启RSS功能"><a href="#开启RSS功能" class="headerlink" title="开启RSS功能"></a>开启RSS功能</h4><p>编辑hexo/_config.yml，添加如下代码：</p>
-<pre class="line-numbers language-none"><code class="language-none">rss: &#x2F;atom.xml #rss地址  默认即可<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">rss: /atom.xml #rss地址  默认即可<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h4><p>1.我使用多说代替自带的评论，在<a target="_blank" rel="noopener" href="http://duoshuo.com/">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name</p>
 <ol>
 <li>在根目录 <code>_config.yml</code> 添加一行 <code>disqus_shortname: jslite</code> 是在多说注册时产生的</li>
 <li>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把</li>
 </ol>
-<pre class="line-numbers language-none"><code class="language-none">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;
-&lt;section id&#x3D;&quot;comments&quot;&gt;
-&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;
-  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href&#x3D;&quot;&#x2F;&#x2F;disqus.com&#x2F;?ref_noscript&quot;&gt;comments powered by Disqus.&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
-&lt;&#x2F;div&gt;
-&lt;&#x2F;section&gt;
-&lt;% &#125; %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;
+&lt;section id="comments"&gt;
+&lt;div id="disqus_thread"&gt;
+  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="//disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>改为</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;
-  &lt;section id&#x3D;&quot;comments&quot;&gt;
+<pre class="line-numbers language-none"><code class="language-none">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;
+  &lt;section id="comments"&gt;
     &lt;!-- 多说评论框 start --&gt;
-    &lt;div class&#x3D;&quot;ds-thread&quot; data-thread-key&#x3D;&quot;&lt;%&#x3D; post.layout %&gt;-&lt;%&#x3D; post.slug %&gt;&quot; data-title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; data-url&#x3D;&quot;&lt;%&#x3D; page.permalink %&gt;&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class="ds-thread" data-thread-key="&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;" data-title="&lt;%= post.title %&gt;" data-url="&lt;%= page.permalink %&gt;"&gt;&lt;/div&gt;
     &lt;!-- 多说评论框 end --&gt;
     &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-    &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;
-    var duoshuoQuery &#x3D; &#123;short_name:&#39;&lt;%&#x3D; config.disqus_shortname %&gt;&#39;&#125;;
-      (function() &#123;
-        var ds &#x3D; document.createElement(&#39;script&#39;);
-        ds.type &#x3D; &#39;text&#x2F;javascript&#39;;ds.async &#x3D; true;
-        ds.src &#x3D; (document.location.protocol &#x3D;&#x3D; &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;&#x2F;&#x2F;static.duoshuo.com&#x2F;embed.js&#39;;
-        ds.charset &#x3D; &#39;UTF-8&#39;;
-        (document.getElementsByTagName(&#39;head&#39;)[0] 
-         || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds);
-      &#125;)();
-      &lt;&#x2F;script&gt;
+    &lt;script type="text/javascript"&gt;
+    var duoshuoQuery = {short_name:'&lt;%= config.disqus_shortname %&gt;'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      &lt;/script&gt;
     &lt;!-- 多说公共JS代码 end --&gt;
-  &lt;&#x2F;section&gt;
-&lt;% &#125; %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  &lt;/section&gt;
+&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>

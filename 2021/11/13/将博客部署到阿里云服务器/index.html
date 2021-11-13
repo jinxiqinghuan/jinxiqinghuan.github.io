@@ -6,10 +6,12 @@
     <meta charset="utf-8">
     <meta name="keywords" content="将博客部署到阿里云服务器, study">
     <meta name="description" content="常用命令（只适用于我的主机）1.进入配置文件夹：
-cd &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;webserver&amp;#x2F;nginx
+cd /usr/local/webserver/nginx
 
 2.查看nginx版本
-&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;webser">
+/usr/local/webserver/nginx/sbin/nginx -v
+
+3.检查配置文件ng">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -34,7 +36,9 @@ cd &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;webserver&amp;#x2F;nginx
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -471,25 +475,25 @@ cd &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;webserver&amp;#x2F;nginx
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="常用命令（只适用于我的主机）"><a href="#常用命令（只适用于我的主机）" class="headerlink" title="常用命令（只适用于我的主机）"></a>常用命令（只适用于我的主机）</h2><p>1.进入配置文件夹：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd &#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd /usr/local/webserver/nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2.查看nginx版本</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>3.检查配置文件nginx.conf的正确性命令</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx -t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>4.重新载入配置文件</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>5.重启 Nginx(不建议使用，有时修改的配置不会生效)</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -s reopen<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx -s reopen<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>6.运行Nginx</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>6.停止 Nginx</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -s stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">/usr/local/webserver/nginx/sbin/nginx -s stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <span id="more"></span>
 
@@ -515,7 +519,7 @@ cd &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;webserver&amp;#x2F;nginx
 <p>早上起来后，我又切换了方案。本地Hexo先同步到github上，然后在服务器中直接 git clone一下，这样博客在本地、github、主机上都有备份。</p>
 <p>过程中遇到的问题：</p>
 <p>1.首先就是nginx配置文件问题，导致访问受限，出现403报错，浪费了很多时间，有时间专门学习一下。（<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/nginx-setup-intro.html">相关链接</a>）</p>
-<p>2.Hexo在撰写文件后，会自动生成一个中文目录来存储文章，导致404  not foud错误。（<a target="_blank" rel="noopener" href="https://blog.csdn.net/MarkArch/article/details/80811075?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task">解决方案</a>）</p>
+<p>2.Hexo在撰写文件后，会自动生成一个中文目录来存储文章，导致404  not foud错误。（<a target="_blank" rel="noopener" href="https://blog.csdn.net/MarkArch/article/details/80811075?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">解决方案</a>）</p>
 
                 
             </div>

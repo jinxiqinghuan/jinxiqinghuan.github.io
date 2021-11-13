@@ -34,7 +34,9 @@ torch_d">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -589,7 +591,7 @@ optimizer <span class="token operator">=</span> optim<span class="token punctuat
         loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
         optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>batch_idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">30</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Train Epoch: &#123;&#125; [&#123;&#125;/&#123;&#125; (&#123;:.0f&#125;%)]\tLoss: &#123;:.6f&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>
                 epoch<span class="token punctuation">,</span> batch_idx <span class="token operator">*</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_loader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span><span class="token punctuation">,</span>
                        <span class="token number">100</span><span class="token punctuation">.</span> <span class="token operator">*</span> batch_idx <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_loader<span class="token punctuation">)</span><span class="token punctuation">,</span> loss<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
@@ -608,7 +610,7 @@ optimizer <span class="token operator">=</span> optim<span class="token punctuat
             correct <span class="token operator">+=</span> pred<span class="token punctuation">.</span>eq<span class="token punctuation">(</span>target<span class="token punctuation">.</span>view_as<span class="token punctuation">(</span>pred<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
     test_loss <span class="token operator">/=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>test_loader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nTest set: Average loss: &#123;:.4f&#125;, Accuracy: &#123;&#125;/&#123;&#125; (&#123;:.0f&#125;%) \n"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%) \n"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>
         test_loss<span class="token punctuation">,</span> correct<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>test_loader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span><span class="token punctuation">,</span>
         <span class="token number">100</span><span class="token punctuation">.</span> <span class="token operator">*</span> correct <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>test_loader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span>
     <span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -633,7 +635,7 @@ flag <span class="token operator">=</span> torch<span class="token punctuation">
 
 ngpu<span class="token operator">=</span> <span class="token number">1</span>
 <span class="token comment"># Decide which device we want to run on</span>
-device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">"cuda:0"</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> ngpu <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">"cpu"</span><span class="token punctuation">)</span>
+device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">"cuda:0"</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> ngpu <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">"cpu"</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"驱动为："</span><span class="token punctuation">,</span>device<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"GPU型号： "</span><span class="token punctuation">,</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>get_device_name<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -681,8 +683,8 @@ t1 <span class="token operator">=</span> time<span class="token punctuation">.</
 True
 cpu 5.827749252319336 tensor(586883.4375)
 cpu 6.121405601501465 tensor(586883.4375)
-cuda:0 0.2789483070373535 tensor(599939.1250, device&#x3D;&#39;cuda:0&#39;)
-cuda:0 1.1803054809570312 tensor(599939.1250, device&#x3D;&#39;cuda:0&#39;)
+cuda:0 0.2789483070373535 tensor(599939.1250, device='cuda:0')
+cuda:0 1.1803054809570312 tensor(599939.1250, device='cuda:0')
 
 Process finished with exit code 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
