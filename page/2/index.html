@@ -36,6 +36,7 @@
 
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
 </head>
 
 
@@ -307,7 +308,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -328,7 +331,7 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/Opencv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/">
+                    <a href="/2021/11/13/opencv-tu-xiang-chu-li-ji-chu/">
                         <div class="card-image">
                             
                             
@@ -381,7 +384,7 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/ML/">
+                    <a href="/2021/11/13/ml/">
                         <div class="card-image">
                             
                             
@@ -441,7 +444,7 @@ import numpy as np
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/leetcode%E7%AC%94%E8%AE%B0/">
+                    <a href="/2021/11/13/leetcode-bi-ji/">
                         <div class="card-image">
                             
                             
@@ -493,7 +496,7 @@ class Solution:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                    <a href="/2021/11/13/hexo-chang-yong-ming-ling/">
                         <div class="card-image">
                             
                             
@@ -551,7 +554,7 @@ hexo init #初始化
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/hexo%20d%E5%A4%B1%E8%B4%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/">
+                    <a href="/2021/11/13/hexo-d-shi-bai-ji-yuan-yin-fen-xi/">
                         <div class="card-image">
                             
                             
@@ -607,7 +610,7 @@ hexo init #初始化
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/Git%E5%86%B2%E7%AA%81%EF%BC%9Acommit%20your%20changes%20or%20stash%20them%20before%20you%20can%20merge.%20%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+                    <a href="/2021/11/13/git-chong-tu-commit-your-changes-or-stash-them-before-you-can-merge.jie-jue-ban-fa/">
                         <div class="card-image">
                             
                             
@@ -658,7 +661,7 @@ error: Your local changes to the following files would be overwritten by merge:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/C++%E5%AE%9E%E7%8E%B0%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                    <a href="/2021/11/13/c-shi-xian-tong-xun-lu-guan-li-xi-tong/">
                         <div class="card-image">
                             
                             
@@ -707,52 +710,7 @@ error: Your local changes to the following files would be overwritten by merge:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-title: ‘C#学习笔记’categories:
-
-‘C#’tags:
-‘C#’
-学习笔记系列date: 2020-09-27 15:44:00
-
-
-1.如何从控制台中读取数字查看Console.ReadLine() 的定义代码得知，
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-13
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                qinghuan
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/11/13/C%20Primer%20Plus%E8%AF%BE%E5%90%8E%E7%BC%96%E7%A8%8B%E4%B9%A0%E9%A2%98/">
+                    <a href="/2021/11/13/c-primer-plus-ke-hou-bian-cheng-xi-ti/">
                         <div class="card-image">
                             
                             
@@ -801,7 +759,7 @@ title: ‘C#学习笔记’categories:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91C++%E9%9D%A2%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                    <a href="/2021/11/13/zhuan-zai-c-mian-shi-ji-chu-zhi-shi/">
                         <div class="card-image">
                             
                             
@@ -858,7 +816,7 @@ title: ‘C#学习笔记’categories:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/10/13/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    <a href="/2020/10/13/java-xue-xi-bi-ji/">
                         <div class="card-image">
                             
                             
@@ -896,12 +854,12 @@ title: ‘C#学习笔记’categories:
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Java/">
-                            <span class="chip bg-color">Java</span>
-                        </a>
-                        
                         <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97/">
                             <span class="chip bg-color">学习笔记系列</span>
+                        </a>
+                        
+                        <a href="/tags/Java/">
+                            <span class="chip bg-color">Java</span>
                         </a>
                         
                     </div>
@@ -913,7 +871,7 @@ title: ‘C#学习笔记’categories:
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/09/28/Linux%E8%84%9A%E6%9C%AC%E7%A4%BA%E4%BE%8B%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99/">
+                    <a href="/2020/09/28/linux-jiao-ben-shi-li-jian-dan-jiao-ben-shi-xian-zi-dong-geng-xin-wang-zhan/">
                         <div class="card-image">
                             
                             
@@ -956,6 +914,60 @@ title: ‘C#学习笔记’categories:
                         
                         <a href="/tags/shell%E8%84%9A%E6%9C%AC/">
                             <span class="chip bg-color">shell脚本</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/09/27/c-xue-xi-bi-ji/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="C#学习笔记">
+                            
+                            <span class="card-title">C#学习笔记</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1.如何从控制台中读取数字查看Console.ReadLine() 的定义代码得知，它读取的是字符串，需要转换成整形。Convert.ToInt32()可以将数字的指定字符串表示形式转换为等效的 32 位带符号整数。
+namespace C
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C/" class="post-category">
+                                    C#
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97/">
+                            <span class="chip bg-color">学习笔记系列</span>
                         </a>
                         
                     </div>

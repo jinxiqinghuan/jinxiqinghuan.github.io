@@ -36,6 +36,7 @@
 
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="今夕清欢" type="application/atom+xml">
 </head>
 
 
@@ -306,7 +307,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -336,11 +339,11 @@
                 </a>
                 
                 
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 6">
+                <a href="/categories/C/" title="C#: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">前端
-                        <span class="tag-length">6</span>
+                            style="background-color: #F5EEF8;">C#
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -363,20 +366,29 @@
                 </a>
                 
                 
-                <a href="/categories/%E5%89%8D%E7%AB%AF/Shell/" title="Shell: 1">
+                <a href="/categories/Java/" title="Java: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">Shell
+                            style="background-color: #FEF9E7;">Java
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 3">
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">机器学习
-                        <span class="tag-length">3</span>
+                            style="background-color: #F8F9F9;">前端
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #82E0AA;">机器学习
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -384,16 +396,7 @@
                 <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="图像处理: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #82E0AA;">图像处理
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D7BDE2;">Java
+                            style="background-color: #D7BDE2;">图像处理
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -426,10 +429,10 @@
                 </a>
                 
                 
-                <a href="/categories/C-C/" title="C/C++: 1">
+                <a href="/categories/%E5%89%8D%E7%AB%AF/Shell/" title="Shell: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9E79F;">C/C++
+                            style="background-color: #F9E79F;">Shell
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -439,6 +442,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F9EBEA;">服务器
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/C-C/" title="C/C++: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8C471;">C/C++
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -457,7 +469,7 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%92%8CSSH%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+                    <a href="/2021/11/13/fu-wu-qi-nei-wang-chuan-tou-he-ssh-da-jian-jiao-cheng/">
                         <div class="card-image tag-image">
                             
                             
