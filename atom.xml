@@ -6,7 +6,7 @@
   <link href="https://jinxiqinghuan.github.io/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2020-10-12T03:12:29.297Z</updated>
+  <updated>2021-11-19T05:58:37.356Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Transformer分享</title>
+    <link href="https://jinxiqinghuan.github.io/2021/11/19/transformer/"/>
+    <id>https://jinxiqinghuan.github.io/2021/11/19/transformer/</id>
+    <published>2021-11-19T05:57:47.244Z</published>
+    <updated>2021-11-19T05:58:37.356Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Transformer&quot;&gt;&lt;a href=&quot;#Transformer&quot; class=&quot;headerlink&quot; title=&quot;Transformer&quot;&gt;&lt;/a&gt;Transformer&lt;/h1&gt;&lt;h2 id=&quot;一-概览&quot;&gt;&lt;a href=&quot;#一-概览&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机视觉" scheme="https://jinxiqinghuan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    <category term="Transformer" scheme="https://jinxiqinghuan.github.io/tags/Transformer/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -511,25 +540,6 @@ hexo init #初始化&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbe
     
     
     <category term="C++" scheme="https://jinxiqinghuan.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C Primer Plus课后编程习题</title>
-    <link href="https://jinxiqinghuan.github.io/2021/11/13/c-primer-plus-ke-hou-bian-cheng-xi-ti/"/>
-    <id>https://jinxiqinghuan.github.io/2021/11/13/c-primer-plus-ke-hou-bian-cheng-xi-ti/</id>
-    <published>2021-11-13T03:20:17.869Z</published>
-    <updated>2020-02-17T08:52:55.621Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;所有程序都运行过，部分题目存在的问题已经标注，欢迎指正。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="C" scheme="https://jinxiqinghuan.github.io/categories/C/"/>
-    
-    
-    <category term="C" scheme="https://jinxiqinghuan.github.io/tags/C/"/>
     
   </entry>
   
