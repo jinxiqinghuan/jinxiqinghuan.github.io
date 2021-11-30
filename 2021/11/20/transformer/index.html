@@ -433,7 +433,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-22
+                    2021-11-25
                 </div>
                 
 
@@ -455,7 +455,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><h2 id="一-概览"><a href="#一-概览" class="headerlink" title="一. 概览"></a>一. 概览</h2><p><img src="http://image.lijitao.top//20211116115554.png" alt="Transformer和它的延伸网络"></p>
+                <h1 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h1><p><a target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/chapter_attention-mechanisms/index.html">10. 注意力机制 — 动手学深度学习 2.0.0-alpha2 documentation (d2l.ai)</a></p>
+<h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><h2 id="一-概览"><a href="#一-概览" class="headerlink" title="一. 概览"></a>一. 概览</h2><p><img src="http://image.lijitao.top//20211116115554.png" alt="Transformer和它的延伸网络"></p>
 <p>基于Transformer的另外两个比较著名的工作是Bert和ViT，Bert采用了更深的解码器，ViT是专门用于CV领域的Transform.，还有一个就是曹越的Swin Transformer。</p>
 <p>图像生成：iGPT,  TransGAN</p>
 <p><img src="http://image.lijitao.top//202111161211249.jpg" alt="Transformer基本结构"></p>
@@ -495,7 +496,7 @@
 <p>在李宏毅的课程中是这样讲的，位置编码是一个one_hot vector, 然后与输入做一个contact。其中Wp是人设的。</p>
 <p><img src="http://image.lijitao.top//20211116164848.png" alt=" "></p>
 <p><img src="http://image.lijitao.top//20211116165112.png" alt=" "></p>
-<h3 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h3><p><img src="http://image.lijitao.top//20211116122154.png" alt=" "></p>
+<h3 id="注意力机制-1"><a href="#注意力机制-1" class="headerlink" title="注意力机制"></a>注意力机制</h3><p><img src="http://image.lijitao.top//20211116122154.png" alt=" "></p>
 <p>Attention的思想就是喂进去两个向量，然后给出这两个向量的match程度，评分。</p>
 <p>$$ Attention(Q, K, V) = softmax(\frac{QK_{}^{T}}{\sqrt{d_k}})V $$</p>
 <p><img src="http://image.lijitao.top//20211116124203.png" alt=" "></p>
@@ -831,9 +832,18 @@
 <p>作者：卷积神经网络经常关注局部感受问题，比如我们使用maxpooling 方法来提高感受野等。但是transformer的一个特点是“天涯若比邻”，已经不需要讨论感受野的问题了。每个token会与其他所有token交互。但是当我想生成狗的鼻子的是时候，我更关注的是鼻子附近的区域，其他位置比如草地、天空，和该任务关系不大。</p>
 <p>虽然不存在感受野的问题，但是它缺失了CNN的关注局部的特性。</p>
 <p>但是使用局部限制策略，又会影响它的全局优势。所以一开始使用mask，使它更关注局部。随着训练的进行，增大mask的windows size，关注的氛围越来越大。只到训练结束，会达到全局。</p>
-<h4 id="更大的模型"><a href="#更大的模型" class="headerlink" title="更大的模型"></a>更大的模型</h4><p><img src="http://image.lijitao.top//202111211615151.png" alt=" "></p>
+<h3 id="更大的模型"><a href="#更大的模型" class="headerlink" title="更大的模型"></a>更大的模型</h3><p><img src="http://image.lijitao.top//202111211615151.png" alt=" "></p>
 <p>对D进行加深，没有得到很好的提升，这一点和biggan是相同的，提升主要来源于G。</p>
 <p><img src="http://image.lijitao.top//202111211616266.png" alt=" "></p>
+<h1 id="TransUnet：-Transformer和Unet的强强联合"><a href="#TransUnet：-Transformer和Unet的强强联合" class="headerlink" title="TransUnet： Transformer和Unet的强强联合"></a>TransUnet： Transformer和Unet的强强联合</h1><p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2102.04306">https://arxiv.org/abs/2102.04306</a></p>
+<p>开源代码：<a target="_blank" rel="noopener" href="https://github.com/Beckschen/TransUNet.git">https://github.com/Beckschen/TransUNet.git</a></p>
+<p>3D实现及其他：<a target="_blank" rel="noopener" href="https://github.com/The-AI-Summer/self-attention-cv.git">https://github.com/The-AI-Summer/self-attention-cv.git</a></p>
+<h2 id="一、Introdution"><a href="#一、Introdution" class="headerlink" title="一、Introdution"></a>一、Introdution</h2><ul>
+<li>Unet是目前语义分割网络常用的网络架构，但是由于卷积固有的局部性特征，基于卷积的方法不能有效建模长程关系。</li>
+<li>Transformers是为sequence to sequence的预测设计的方法，不仅对于全文建模有很大的优势，而且在大规模的预训练中，它还表现出对下游任务的优越的可转移性。</li>
+<li>文章提出Unet和Transformers结合的TransUNet。</li>
+</ul>
+<p><img src="http://image.lijitao.top//202111251439979.png" alt="image-20211125143919927"></p>
 
                 
             </div>
@@ -1079,56 +1089,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/20/transformer/">
+                <a href="/2021/11/29/python-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Transformer, VIT and TransGAN">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python学习笔记">
                         
-                        <span class="card-title">Transformer, VIT and TransGAN</span>
+                        <span class="card-title">Python学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于Transformer, VIT 和 TransGAN的内容整理。
+                            Python学习笔记记录
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">
-                        <span class="chip bg-color">计算机视觉</span>
-                    </a>
-                    
-                    <a href="/tags/Transformer/">
-                        <span class="chip bg-color">Transformer</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>

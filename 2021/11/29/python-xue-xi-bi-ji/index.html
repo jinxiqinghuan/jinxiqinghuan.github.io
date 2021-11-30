@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Pycharm入门手册, study">
-    <meta name="description" content="本文主要介绍pycharm的基本使用方法，并不是全面的pycharm使用教程，看完本文后能够搭建开发环境并进行简单的开发。本文以安装sklearn库为例。
-
-
-前言在机器学习的学习中，我们经常会使用不同版本的python和不同的库作为开发环">
+    <meta name="keywords" content="Python学习笔记, study">
+    <meta name="description" content="Python学习笔记记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Pycharm入门手册 | 今夕清欢</title>
+    <title>Python学习笔记 | 今夕清欢</title>
     
     <link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -280,7 +277,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Pycharm入门手册</h1>
+                    <h1 class="description center-align post-title">Python学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -396,12 +393,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/pycharm/">
-                                <span class="chip bg-color">pycharm</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -412,8 +405,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python/" class="post-category">
-                                python
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -425,14 +418,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-13
+                    2021-11-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-17
+                    2021-11-29
                 </div>
                 
 
@@ -454,27 +447,199 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文主要介绍pycharm的基本使用方法，并不是全面的pycharm使用教程，看完本文后能够搭建开发环境并进行简单的开发。本文以安装sklearn库为例。</p>
-<span id="more"></span>
+                <h2 id="1-python包管理"><a href="#1-python包管理" class="headerlink" title="1. python包管理"></a>1. python包管理</h2><p>python的包文件夹下需要有<code>__init__.py</code>文件。</p>
+<p>在调用包的时候，会默认运行该文件。因此，该文件可以设置为空，也可以做一些初始化工作。比如导入子包的模块。</p>
+<p><img src="http://image.lijitao.top//202111291058693.png" alt="image-20211129105820602"></p>
+<p>比如在ljt下的初始化文件中，我写入了<code> from ljt.aa import aa_ljt</code>， 当我想调用aa_ljt.py文件时，直接<code>from ljt import aa_ljt</code>就可以了。而此时bb_ljt.py文件调用时需要逐级去索引： <code>from ljt.bb import bb_ljt </code>。</p>
+<h2 id="2-Django-Web开发"><a href="#2-Django-Web开发" class="headerlink" title="2. Django Web开发"></a>2. Django Web开发</h2><p>参考 <a target="_blank" rel="noopener" href="http://www.byhy.net/tut/webdev/django/01/%E5%AD%A6%E4%B9%A0%E4%BA%86%E4%B8%80%E9%81%8D%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BE%88%E5%A4%9A%E7%BB%86%E8%8A%82%E8%BF%98%E4%B8%8D%E6%98%AF%E5%BE%88%E7%90%86%E8%A7%A3%E3%80%82%E6%AD%A4%E9%83%A8%E5%88%86%E5%BE%85%E7%AC%94%E8%AE%B0%E5%AE%8C%E5%96%84%E3%80%82">http://www.byhy.net/tut/webdev/django/01/学习了一遍，但是很多细节还不是很理解。此部分待笔记完善。</a></p>
+<h2 id="3-Python-Qt-PySide2-GUI-界面开发"><a href="#3-Python-Qt-PySide2-GUI-界面开发" class="headerlink" title="3. Python Qt(PySide2) GUI 界面开发"></a>3. Python Qt(PySide2) GUI 界面开发</h2><p>参考： <a target="_blank" rel="noopener" href="http://www.byhy.net/tut/py/gui/qt_02/">http://www.byhy.net/tut/py/gui/qt_02/</a></p>
+<h2 id="4-Python-文件和目录操作"><a href="#4-Python-文件和目录操作" class="headerlink" title="4. Python 文件和目录操作"></a>4. Python 文件和目录操作</h2><p>os.makedirs 可以递归的创建目录结构，比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span><span class="token string">'tmp/python/fileop'</span><span class="token punctuation">,</span>exist_ok<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>在机器学习的学习中，我们经常会使用不同版本的python和不同的库作为开发环境，如果把所有包都安装到一个开发环境中，会十分臃肿且不利于开发。所有我们经常会使用到anaconda等工具来管理开发环境。</p>
-<h4 id="anaconda创建开发环境"><a href="#anaconda创建开发环境" class="headerlink" title="anaconda创建开发环境"></a>anaconda创建开发环境</h4><p>假如我们要使用pip来安装sklearn库，我们需要查询sklearn库的依赖包，先按照顺序将依赖包安装好后，最后才能安装sklearn。中间还可能出现版本不兼容等等问题。而使用anaconda，这一切问题anaconda都替我们解决了！我们只需要：</p>
-<p>1.打开anaconda Navigator，在Enviroments中创建一个环境，并命名（随意，好记就可以），这里的python版本根据自己的需要设置即可。</p>
-<p><img src="http://image.lijitao.top/202071702.PNG"></p>
-<p>2.等python基本环境安装好后，我们就可以安装skleran库了！搜索所有包，输入scikit_learn,anaconda就帮我们找到了需要安装的包。点击Apply。</p>
-<p><img src="http://image.lijitao.top/202071704.PNG"></p>
-<p>3.这样sklearn包及其依赖包就都找到了，就不需要我们不断查询sklearn依赖包到底是个啥，直接一键自动安装成功！</p>
-<p><img src="http://image.lijitao.top/202071705.PNG"></p>
-<p>因为很多库的包很大，所有安装可能需要耗费比较长的时间。还有一个原因就包的默认下载地址，是一个国外的网址，因为某些众所周知的原因，导致这些网址访问非常慢。所有无法忍受的话，可以根据网上的教程来换源，具体过程就不再赘述。可以参考 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yikemogutou/p/11396045.html">anaconda换源方法</a> </p>
-<h5 id="pycharm来调用anaconda创建好的环境"><a href="#pycharm来调用anaconda创建好的环境" class="headerlink" title="pycharm来调用anaconda创建好的环境"></a>pycharm来调用anaconda创建好的环境</h5><p>这样我们的环境就创建好了，但是怎么去使用它呢？anaconda本身也有十分优秀的开发工具，比如Spyder(数据处理科学计算十分强大)</p>
-<p>和 Jupyter(像写笔记一样编程，强烈推荐)，这里先介绍使用Pycharm来调用这个环境。</p>
-<p>创建好工程后，我们要选择刚刚在anaconda创建好的包含sklearn的环境，</p>
-<p> 依次点击File—Project:—Project Interpreter，如果在右侧的Project Interpreter没有看到你要找的sklearn环境，就根据下图进行添加。一般在下拉框就可以找到，选择后点击OK，再点击OK，就选择好了！（如果没有找到，一般是在anaconda安装路径下的envs文件夹中，选择即可）。</p>
-<p><img src="http://image.lijitao.top/202071706.PNG"></p>
-<p>回到主界面时，我们发现右下角的环境已经显示为我之前在anaconda创建的‘sklearn_test’了。<img src="http://image.lijitao.top/202071707.PNG"></p>
-<p>这个时候，Pycharm会重新加载环境，Pycharm变得卡顿，等加载完成后就可以进行开发了！</p>
-<p><img src="http://image.lijitao.top/202071708.PNG"></p>
-<p>在编辑器中输入import sklearn,发现并没有报错，表明调用成功！</p>
+<p>会在当前工作目录下面创建 tmp目录，在tmp目录下面再创建 python目录，在Python目录下面再创建fileop目录</p>
+<p><code>exist_ok=True</code> 指定了，如果某个要创建的目录已经存在，也不报错</p>
+<h3 id="删除文件或目录"><a href="#删除文件或目录" class="headerlink" title="删除文件或目录"></a>删除文件或目录</h3><p>os.remove 可以删除一个文件，比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'sdf.py'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>shutil.rmtree() 可以递归的删除某个目录所有的子目录和子文件 比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> shutil
+shutil<span class="token punctuation">.</span>rmtree<span class="token punctuation">(</span><span class="token string">'tmp'</span><span class="token punctuation">,</span> ignore_errors<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>注意：参数 <code>ignore_errors=True</code> 保证如果目录不为空，不会抛出异常。</p>
+<h3 id="拷贝文件"><a href="#拷贝文件" class="headerlink" title="拷贝文件"></a>拷贝文件</h3><p>shutil 模块里面有很多 目录文件操作的函数</p>
+<p>拷贝文件，可以使用shutil模块的copyfile函数。</p>
+<p>比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> shutil <span class="token keyword">import</span> copyfile
+
+<span class="token comment"># 拷贝 d:/tools/first.py 到 e:/first.py</span>
+copyfile<span class="token punctuation">(</span><span class="token string">'d:/tools/first.py'</span><span class="token punctuation">,</span> <span class="token string">'e:/first.py'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意，如果拷贝前，e:/first.py 已经存在，则会被拷贝覆盖，所以使用该函数一定要小心。</p>
+<h3 id="拷贝目录"><a href="#拷贝目录" class="headerlink" title="拷贝目录"></a>拷贝目录</h3><p>如果我们要拷贝一个目录里面所有的内容（包括子目录和文件、子目录里面的子目录和文件，等等）到另外一个目录中，可以使用 shutil的copytree函数。</p>
+<p>如下所示</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> shutil <span class="token keyword">import</span> copytree
+
+<span class="token comment"># 拷贝 d:/tools/aaa 目录中所有的内容 到 e:/bbb 中</span>
+copytree<span class="token punctuation">(</span><span class="token string">'d:/tools/aaa'</span><span class="token punctuation">,</span> <span class="token string">'e:/new/bbb'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意拷贝前， 目标目录必须 <code>不存在</code> ，否则会报错。</p>
+<p>上面的代码执行前面，如果 e:/new/bbb 已经存在，执行到copytree时，就会报错</p>
+<p>上面的代码执行前面，如果 e:/new 这个目录都不存在，执行到copytree时，就会 创建 e:/new 目录，再创建 e:/new/bbb 目录，再拷贝 d:/tools/aaa 目录中所有的内容 到 e:/new/bbb 中。</p>
+<p>上面的代码执行前面，如果 e:/new 这个目录存在，但是 e:/new/bbb 不存在，执行到copytree时，就只会 创建 e:/new/bbb ，再拷贝 d:/tools/aaa 目录中所有的内容 到 e:/new/bbb 中。</p>
+<h3 id="修改文件名、目录名"><a href="#修改文件名、目录名" class="headerlink" title="修改文件名、目录名"></a>修改文件名、目录名</h3><p>要修改文件名、目录名，可以使用os模块的rename函数。</p>
+<p>比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 修改目录名 d:/tools/aaa 为 d:/tools/bbb</span>
+os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">'d:/tools/aaa'</span><span class="token punctuation">,</span><span class="token string">'d:/tools/bbb'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 修改文件名 d:/tools/first.py 为 d:/tools/second.py</span>
+os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">'d:/tools/first.py'</span><span class="token punctuation">,</span><span class="token string">'d:/tools/second.py'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意，Linux 系统上，如果重命名之前 d:/tools/second.py 已经存在，则会被覆盖，所以使用该函数一定要小心。</p>
+<h3 id="对文件路径名的操作"><a href="#对文件路径名的操作" class="headerlink" title="对文件路径名的操作"></a>对文件路径名的操作</h3><p>对于文件名的操作，比如 获取文件名称，文件所在目录，文件路径的拼接等，都可以使用 os.path 模块。</p>
+<p>通常我们喜欢使用格式化字符串的方法来做文件路径的拼接，但是如果你的程序需要在Linux、Windows等多个平台运行，它们的路径的分隔符是不同的，Windows上是 <code>\</code> , 而 Linux上是 <code>/</code>。</p>
+<p>这时，我们应该使用 os.path 模块。 它能够自动处理类似 Data/data.csv 和 Data\data.csv 这样的文件路径差异。</p>
+<p>比如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> os
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> path <span class="token operator">=</span> <span class="token string">'/Users/beazley/Data/data.csv'</span>
+
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token comment"># 获取路径中的文件名部分</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token string">'data.csv'</span>
+
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token comment"># 获取路径中的目录部分</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token string">'/Users/beazley/Data'</span>
+
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token comment"># 文件路径的拼接</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">'tmp'</span><span class="token punctuation">,</span> <span class="token string">'data'</span><span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token string">'tmp/data/data.csv'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="判断文件、目录是否存在"><a href="#判断文件、目录是否存在" class="headerlink" title="判断文件、目录是否存在"></a>判断文件、目录是否存在</h3><p>如果我们需要判断一个指定路径的文件或者目录是否存在，可以使用下面的方法</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">'d:/systems/cmd.exe'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">'d:/systems'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>exists方法返回值为True表示 存在，否则表示不存在。</p>
+<p>如果你要判断指定路径是否是文件，可以这样</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 返回值为True 表示是文件</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span><span class="token string">'d:/systems/cmd.exe'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>如果你要判断指定路径是否是目录，可以这样</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 返回值为True 表示是目录</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span><span class="token string">'d:/systems'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="文件大小和修改日期"><a href="#文件大小和修改日期" class="headerlink" title="文件大小和修改日期"></a>文件大小和修改日期</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 返回文件大小</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">(</span><span class="token string">'file1'</span><span class="token punctuation">)</span> 
+<span class="token number">3669</span>
+
+<span class="token comment"># 返回文件的最后修改日期，是秒时间</span>
+<span class="token comment"># 参考下一章 日期和时间 里面的内容</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getmtime<span class="token punctuation">(</span><span class="token string">'file1'</span><span class="token punctuation">)</span> 
+<span class="token number">1272478234.0</span>
+
+<span class="token comment"># 可以把秒时间 转化为日期时间</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> time
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getmtime<span class="token punctuation">(</span><span class="token string">'/etc/passwd'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token string">'Wed Apr 28 13:10:34 2010'</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="当前工作目录"><a href="#当前工作目录" class="headerlink" title="当前工作目录"></a>当前工作目录</h3><p>我们的程序运行时，是有 <code>当前工作目录</code> 的。</p>
+<p>程序代码中所有的对文件的访问，如果使用相对路径，都是基于这个当前工作目录。</p>
+<p>有时候我们需要得到程序的当前工作目录的路径，可以使用</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">cwd <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果需要改变当前工作目录到另外的路径，可以使用</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>参数就是 新的当前工作目录 路径地址。</p>
+<h3 id="递归的遍历目录下面所有的文件"><a href="#递归的遍历目录下面所有的文件" class="headerlink" title="递归的遍历目录下面所有的文件"></a>递归的遍历目录下面所有的文件</h3><p>假如我们要获取某个目录中所有的 文件， 包括子目录里面的文件。 可以使用 os库中的walk方法</p>
+<p>比如我们要得到某个目录下面所有的子目录 和所有的文件，存放在两个列表中</p>
+<p>可以这样写代码</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av74106411/?p=86">点击这里，边看视频讲解，边学习这段代码</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 目标目录</span>
+targetDir <span class="token operator">=</span> <span class="token string">r'd:\tmp\util\dist\check'</span>
+files <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+dirs  <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 下面的三个变量 dirpath, dirnames, filenames</span>
+<span class="token comment"># dirpath 代表当前遍历到的目录名</span>
+<span class="token comment"># dirnames 是列表对象，存放当前dirpath中的所有子目录名</span>
+<span class="token comment"># filenames 是列表对象，存放当前dirpath中的所有文件名</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span> dirnames<span class="token punctuation">,</span> filenames<span class="token punctuation">)</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>walk<span class="token punctuation">(</span>targetDir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    files <span class="token operator">+=</span> filenames
+    dirs <span class="token operator">+=</span> dirnames
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dirs<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果要得到某个目录下所有文件的全路径可以这样</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 目标目录</span>
+targetDir <span class="token operator">=</span> <span class="token string">r'd:\tmp\util\dist\check'</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span> dirnames<span class="token punctuation">,</span> filenames<span class="token punctuation">)</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>walk<span class="token punctuation">(</span>targetDir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> fn <span class="token keyword">in</span> filenames<span class="token punctuation">:</span>
+        <span class="token comment"># 把 dirpath 和 每个文件名拼接起来 就是全路径</span>
+        fpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="得到目录中所有的文件和子目录名"><a href="#得到目录中所有的文件和子目录名" class="headerlink" title="得到目录中所有的文件和子目录名"></a>得到目录中所有的文件和子目录名</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># 目标目录</span>
+targetDir <span class="token operator">=</span> <span class="token string">r'd:\tmp\util\dist\check'</span>
+
+
+files <span class="token operator">=</span>  os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>targetDir<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>listdir返回的是该目录下面所有的文件和子目录。</p>
+<p>如果我们只需要获取目录中所有的文件，或者只需要子目录，可以这样</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">from</span> os<span class="token punctuation">.</span>path <span class="token keyword">import</span> isfile<span class="token punctuation">,</span> join<span class="token punctuation">,</span>isdir
+
+<span class="token comment"># 目标目录</span>
+targetDir <span class="token operator">=</span> <span class="token string">r'd:\tmp\util\dist\check'</span>
+
+<span class="token comment"># 所有的文件</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>f <span class="token keyword">for</span> f <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>targetDir<span class="token punctuation">)</span> <span class="token keyword">if</span> isfile<span class="token punctuation">(</span>join<span class="token punctuation">(</span>targetDir<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 所有的目录</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>f <span class="token keyword">for</span> f <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>targetDir<span class="token punctuation">)</span> <span class="token keyword">if</span> isdir<span class="token punctuation">(</span>join<span class="token punctuation">(</span>targetDir<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="得到目录中指定扩展名的文件和子目录"><a href="#得到目录中指定扩展名的文件和子目录" class="headerlink" title="得到目录中指定扩展名的文件和子目录"></a>得到目录中指定扩展名的文件和子目录</h3><p>可以使用glob库</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+exes <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">r'd:\tmp\*.txt'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>exes<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 
             </div>
@@ -501,7 +666,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jinxiqinghuan.github.io/2021/11/13/pycharm-ru-men-shou-ce/">https://jinxiqinghuan.github.io/2021/11/13/pycharm-ru-men-shou-ce/</a>
+                    <a href="https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/">https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,12 +704,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/pycharm/">
-                                    <span class="chip bg-color">pycharm</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -716,50 +877,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/13/pytorch-xue-xi-bi-ji/">
+                <a href="/2021/11/29/python-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Pytorch学习笔记">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python学习笔记">
                         
-                        <span class="card-title">Pytorch学习笔记</span>
+                        <span class="card-title">Python学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Python学习笔记记录
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">图像处理</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -773,31 +932,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/13/opencv-tu-xiang-chu-li-ji-chu/">
+                <a href="/2021/11/20/transformer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="OpenCV图像处理基础">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Transformer, VIT and TransGAN">
                         
-                        <span class="card-title">OpenCV图像处理基础</span>
+                        <span class="card-title">Transformer, VIT and TransGAN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Reading Research Papers
+                            关于Transformer, VIT 和 TransGAN的内容整理。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -807,12 +966,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">图像处理</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/OpenCV/">
-                        <span class="chip bg-color">OpenCV</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">
+                        <span class="chip bg-color">计算机视觉</span>
+                    </a>
+                    
+                    <a href="/tags/Transformer/">
+                        <span class="chip bg-color">Transformer</span>
                     </a>
                     
                 </div>
@@ -943,6 +1106,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 

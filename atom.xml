@@ -6,7 +6,7 @@
   <link href="https://jinxiqinghuan.github.io/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2021-11-22T12:38:25.854Z</updated>
+  <updated>2021-11-29T03:08:16.245Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python学习笔记</title>
+    <link href="https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/"/>
+    <id>https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/</id>
+    <published>2021-11-29T03:07:00.000Z</published>
+    <updated>2021-11-29T03:08:16.245Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-python包管理&quot;&gt;&lt;a href=&quot;#1-python包管理&quot; class=&quot;headerlink&quot; title=&quot;1. python包管理&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://jinxiqinghuan.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://jinxiqinghuan.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Transformer, VIT and TransGAN</title>
     <link href="https://jinxiqinghuan.github.io/2021/11/20/transformer/"/>
     <id>https://jinxiqinghuan.github.io/2021/11/20/transformer/</id>
     <published>2021-11-20T03:07:00.000Z</published>
-    <updated>2021-11-22T12:38:25.854Z</updated>
+    <updated>2021-11-25T06:39:33.805Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Transformer&quot;&gt;&lt;a href=&quot;#Transformer&quot; class=&quot;headerlink&quot; title=&quot;Transformer&quot;&gt;&lt;/a&gt;Transformer&lt;/h1&gt;&lt;h2 id=&quot;一-概览&quot;&gt;&lt;a href=&quot;#一-概览&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;注意力机制&quot;&gt;&lt;a href=&quot;#注意力机制&quot; class=&quot;headerlink&quot; title=&quot;注意力机制&quot;&gt;&lt;/a&gt;注意力机制&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
         
       
     
@@ -321,7 +346,7 @@
     <link href="https://jinxiqinghuan.github.io/2021/11/13/pytorch-xue-xi-bi-ji/"/>
     <id>https://jinxiqinghuan.github.io/2021/11/13/pytorch-xue-xi-bi-ji/</id>
     <published>2021-11-13T03:20:17.894Z</published>
-    <updated>2020-10-24T06:10:45.677Z</updated>
+    <updated>2021-11-29T12:51:30.469Z</updated>
     
     
       
@@ -337,9 +362,9 @@
     <category term="深度学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -521,25 +546,6 @@ hexo init #初始化&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbe
     
     
     <category term="Git" scheme="https://jinxiqinghuan.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++通讯录管理系统</title>
-    <link href="https://jinxiqinghuan.github.io/2021/11/13/c-shi-xian-tong-xun-lu-guan-li-xi-tong/"/>
-    <id>https://jinxiqinghuan.github.io/2021/11/13/c-shi-xian-tong-xun-lu-guan-li-xi-tong/</id>
-    <published>2021-11-13T03:20:17.871Z</published>
-    <updated>2020-07-17T07:29:39.380Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;跟着B站黑马程序员的视频，练习了一个简单的通讯录管理项目。这个项目只涉及基本的C语言知识，意在练习项目设计的具体过程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="C++" scheme="https://jinxiqinghuan.github.io/categories/C/"/>
-    
-    
-    <category term="C++" scheme="https://jinxiqinghuan.github.io/tags/C/"/>
     
   </entry>
   
