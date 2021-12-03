@@ -6,7 +6,7 @@
   <link href="https://jinxiqinghuan.github.io/atom.xml" rel="self"/>
   
   <link href="https://jinxiqinghuan.github.io/"/>
-  <updated>2021-11-29T03:08:16.245Z</updated>
+  <updated>2021-12-01T09:00:27.712Z</updated>
   <id>https://jinxiqinghuan.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/"/>
     <id>https://jinxiqinghuan.github.io/2021/11/29/python-xue-xi-bi-ji/</id>
     <published>2021-11-29T03:07:00.000Z</published>
-    <updated>2021-11-29T03:08:16.245Z</updated>
+    <updated>2021-12-01T09:00:27.712Z</updated>
     
     
       
@@ -46,7 +46,7 @@
     <link href="https://jinxiqinghuan.github.io/2021/11/20/transformer/"/>
     <id>https://jinxiqinghuan.github.io/2021/11/20/transformer/</id>
     <published>2021-11-20T03:07:00.000Z</published>
-    <updated>2021-11-25T06:39:33.805Z</updated>
+    <updated>2021-12-01T12:10:13.994Z</updated>
     
     
       
@@ -362,9 +362,9 @@
     <category term="深度学习" scheme="https://jinxiqinghuan.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
     <category term="机器学习" scheme="https://jinxiqinghuan.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="图像处理" scheme="https://jinxiqinghuan.github.io/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
